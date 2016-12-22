@@ -1,1 +1,5 @@
 /.idea
+/.env
+/public_html/
+/vendor/
+/storage/
