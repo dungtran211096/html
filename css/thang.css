@@ -1,7 +1,3 @@
-.container {
-  width: 100%;
-}
-
 header nav .navbar-header img {
   width: 100px;
   height: 100%;
@@ -268,9 +264,21 @@ section.main .chuyen-trang .trang-truoc {
   margin-left: 30px;
 }
 
+section.main .chuyen-trang .trang-truoc:before {
+  content: '\f053';
+  font-family: 'FontAwesome';
+  margin-right: 5px;
+}
+
 section.main .chuyen-trang .trang-sau {
   float: right;
   margin-right: 30px;
+}
+
+section.main .chuyen-trang .trang-sau:after {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  margin-left: 5px;
 }
 
 .bx-wrapper .bx-viewport {
