@@ -1,0 +1,88 @@
+<form ng-submit="beforeSubmit()">
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-folder-open"></span>
+            {{title}}
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button class="submit" type="submit"><span class="fa fa-save"></span> Lưu</button>
+            </li>
+            <li>
+                <button class="reset" ng-click="reset()" type="button"><span class="fa fa-repeat"></span> Reset</button>
+            </li>
+            <li>
+                <button class="cancel" ui-sref="articles.cat.list" type="button"><span
+                        class="fa fa-times-circle"></span>
+                    Hủy
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-content">
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="name">Tên Danh Mục</label>
+            </div>
+            <div class="col-md-6">
+                <input class="d-input" id="name" type="text" ng-model="data.name">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="category">Thuộc</label>
+            </div>
+            <div class="col-md-4">
+                <select
+                        class="d-input" id="category"
+                        ng-options="category.id as subName(category) for category in categories"
+                        ng-model="data.parent">
+                    <option value="">Danh Mục Cha</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="sort">Vị Trí</label>
+            </div>
+            <div class="col-md-1">
+                <input class="d-input" type="number" id="sort" ng-model="data.sort">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="active">Hiện</label>
+            </div>
+            <div class="col-md-2">
+                <input type="checkbox" id="active" ng-model="data.active">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="seo_title">Tile (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <input class="d-input" type="text" id="seo_title" ng-model="data.title">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="description">Mô Tả (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <textarea class="d-input" cols="8" id="description" ng-model="data.description"></textarea>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="keyword">Từ Khóa (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <textarea class="d-input" cols="10" id="keyword" ng-model="data.keyword"></textarea>
+            </div>
+        </div>
+
+    </div>
+</form>

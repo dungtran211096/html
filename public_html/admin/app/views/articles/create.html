@@ -1,0 +1,134 @@
+<form ng-submit="submit()">
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-folder-open"></span>
+            Thêm Bài Viết
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button class="submit" type="submit"><span class="fa fa-save"></span> Lưu</button>
+            </li>
+            <li>
+                <button class="reset" ng-click="reset()" type="button"><span class="fa fa-repeat"></span> Reset</button>
+            </li>
+            <li>
+                <button class="cancel" ui-sref="articles.list" type="button"><span class="fa fa-times-circle"></span>
+                    Hủy
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-content">
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="name">Tên Bài Viết</label>
+            </div>
+            <div class="col-md-6">
+                <input class="d-input" id="name" type="text" ng-model="data.name">
+            </div>
+        </div>
+        <div class="form-input featured-image">
+            <div class="col-md-2">
+                <label for="image">Ảnh Đại Diện</label>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <img ng-src="{{data.image}}">
+                </div>
+
+                <button class="d-btn d-success" type="button" ng-click="chooseImage()">Chọn Ảnh</button>
+                <input class="d-input hidden" id="image" type="text" ng-model="data.image">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="image_name">Tên Ảnh</label>
+            </div>
+            <div class="col-md-4">
+                <input class="d-input" id="image_name" type="text" ng-model="data.image_name">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label>Thuộc</label>
+            </div>
+            <div class="col-md-9" id="categories">
+                <div class="col-md-6" ng-repeat="categoryGroup in categoriesGroup">
+                    <ul>
+                        <li ng-repeat="category in categoryGroup">
+                            <span ng-style="{'margin-left': 5*category.subLength}"></span>
+                            <span ng-show="category.subLength" class="sub-icon"></span>
+                            <input type="checkbox" ng-checked="data.categories.indexOf(category.id) !== -1"
+                                   ng-click="selectCategory(category.id)">
+                            {{category.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="excerpt">Tóm Tắt</label>
+            </div>
+            <div class="col-md-9">
+                <textarea ckeditor="excerptConfig" class="d-input" cols="8" id="excerpt"
+                          ng-model="data.excerpt"></textarea>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="content">Nội Dung</label>
+            </div>
+            <div class="col-md-9">
+                <textarea ckeditor="" class="d-input" cols="8" id="content" ng-model="data.content"></textarea>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="active">Hiện</label>
+            </div>
+            <div class="col-md-1">
+                <input type="checkbox" id="active" ng-model="data.active">
+            </div>
+            <div class="col-md-2">
+                <label for="hot">Nổi Bật</label>
+            </div>
+            <div class="col-md-1">
+                <input type="checkbox" id="hot" ng-model="data.hot">
+            </div>
+            <div class="col-md-2">
+                <label for="featured">Quan Tâm</label>
+            </div>
+            <div class="col-md-1">
+                <input type="checkbox" id="featured" ng-model="data.featured">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="seo_title">Tile (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <input class="d-input" type="text" id="seo_title" ng-model="data.title">
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="description">Mô Tả (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <textarea class="d-input" cols="8" id="description" ng-model="data.description"></textarea>
+            </div>
+        </div>
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="keyword">Từ Khóa (SEO)</label>
+            </div>
+            <div class="col-md-7">
+                <textarea class="d-input" cols="10" id="keyword" ng-model="data.keyword"></textarea>
+            </div>
+        </div>
+
+    </div>
+</form>

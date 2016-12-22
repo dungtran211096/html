@@ -54,5 +54,20 @@ Route::group([
     Route::delete('users', 'UsersController@destroys');
     Route::get('users/{id}/active', 'UsersController@active');
 
+/*
+* Article Category Routes
+*/
+Route::get('article-categories/actives', 'ArticleCategoriesController@actives');
+Route::resource('article-categories', 'ArticleCategoriesController');
+Route::delete('article-categories', 'ArticleCategoriesController@destroys');
+Route::get('article-categories/{id}/active', 'ArticleCategoriesController@active');
+/*
+* Article Routes
+*/
+Route::get('articles/actives', 'ArticlesController@actives');
+Route::resource('articles', 'ArticlesController');
+Route::delete('articles', 'ArticlesController@destroys');
+Route::get('articles/{id}/active', 'ArticlesController@active');
+
 //Add_Here
 });

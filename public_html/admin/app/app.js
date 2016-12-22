@@ -50,6 +50,54 @@ vinasem.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
             url: '/:id/chinh-sua',
             controller: 'UpdateUserCtr'
         })
+    // Articles Route
+.state('articles', {
+    abstract: true,
+    template: '<div ui-view></div>',
+    url: '/article',
+    controller: 'ArticlesCtr'
+})
+    /*
+     Categories Route
+     */
+    .state('articles.cat', {
+        templateUrl: 'app/views/article-categories/index.html',
+        url: '/danh-muc',
+        controller: 'ArticleCategoriesCtr'
+    })
+    .state('articles.cat.list', {
+        templateUrl: 'app/views/article-categories/index.html',
+        url: '/',
+        controller: 'ListArticleCategoriesCtr'
+    })
+    .state('articles.cat.create', {
+        templateUrl: 'app/views/article-categories/create.html',
+        url: '/tao-moi',
+        controller: 'AddArticleCategoryCtr'
+    })
+    .state('articles.cat.edit', {
+        templateUrl: 'app/views/article-categories/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'EditArticleCategoryCtr'
+    })
+    /*
+     Articles Route
+     */
+    .state('articles.list', {
+        templateUrl: 'app/views/articles/index.html',
+        url: '',
+        controller: 'ListArticlesCtr'
+    })
+    .state('articles.create', {
+        templateUrl: 'app/views/articles/create.html',
+        url: '/tao-moi',
+        controller: 'AddArticleCtr'
+    })
+    .state('articles.edit', {
+        templateUrl: 'app/views/articles/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'EditArticleCtr'
+    })
     //Add_Here
 });
 
