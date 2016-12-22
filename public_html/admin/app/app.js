@@ -122,6 +122,30 @@ vinasem.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
         url: '/:id/chinh-sua',
         controller: 'UpdateQuestionCtr'
     })
+       /*
+     Schools Route
+     */
+.state('schools', {
+    abstract: true,
+    template: '<div ui-view></div>',
+    url: '/school',
+    controller: 'SchoolsCtr'
+})
+    .state('schools.list', {
+        templateUrl: 'app/views/schools/index.html',
+        url: '',
+        controller: 'ListSchoolsCtr'
+    })
+    .state('schools.create', {
+        templateUrl: 'app/views/schools/create.html',
+        url: '/tao-moi',
+        controller: 'CreateSchoolCtr'
+    })
+    .state('schools.update', {
+        templateUrl: 'app/views/schools/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'UpdateSchoolCtr'
+    })
     //Add_Here
 });
 

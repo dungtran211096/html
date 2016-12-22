@@ -76,6 +76,13 @@ Route::get('questions/actives', 'QuestionsController@actives');
 Route::resource('questions', 'QuestionsController');
 Route::delete('questions', 'QuestionsController@destroys');
 Route::get('questions/{id}/active', 'QuestionsController@active');
+/*
+* School Routes
+*/
+Route::get('schools/actives', 'SchoolsController@actives');
+Route::resource('schools', 'SchoolsController');
+Route::delete('schools', 'SchoolsController@destroys');
+Route::get('schools/{id}/active', 'SchoolsController@active');
 
 //Add_Here
 });

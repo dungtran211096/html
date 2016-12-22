@@ -67,7 +67,17 @@
                 <span class="fa fa-question-circle-o"></span> Câu Hỏi
             </a>
         </li>
-        //Add_Here
+        <li>
+    <a ui-sref="scholls.list" ui-sref-active="active">
+        <span class="fa fa-cogs"></span> Cấu Hình
+    </a>
+</li>
+<li>
+    <a ui-sref="schools.list" ui-sref-active="active">
+        <span class="fa fa-cogs"></span> Cấu Hình
+    </a>
+</li>
+//Add_Here
     </ul>
 </aside>
 <section class="right-section">
