@@ -46,28 +46,28 @@
             </a>
         </li>
         <li class="has-child" ng-class="{expanded:$state.includes('articles')}">
-    <a ng-click="expand($event)" ng-class="{active:$state.includes('articles')}">
-        <span class="fa fa-newspaper-o"></span> Bài Viết
-    </a>
-    <ul>
-        <li ui-sref-active="active" ui-sref="articles.cat.list">
-            <a>
-                <span class="fa fa-folder-open-o"></span> Danh Mục Bài Viết
+            <a ng-click="expand($event)" ng-class="{active:$state.includes('articles')}">
+                <span class="fa fa-newspaper-o"></span> Bài Viết
+            </a>
+            <ul>
+                <li ui-sref-active="active" ui-sref="articles.cat.list">
+                    <a>
+                        <span class="fa fa-folder-open-o"></span> Danh Mục Bài Viết
+                    </a>
+                </li>
+                <li ui-sref-active="active" ui-sref="articles.list">
+                    <a>
+                        <span class="fa fa-list-ol"></span> Danh Sách Bài Viết
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a ui-sref="questions.list" ui-sref-active="active">
+                <span class="fa fa-question-circle-o"></span> Câu Hỏi
             </a>
         </li>
-        <li ui-sref-active="active" ui-sref="articles.list">
-            <a>
-                <span class="fa fa-list-ol"></span> Danh Sách Bài Viết
-            </a>
-        </li>
-    </ul>
-</li>
-<li>
-    <a ui-sref="questions.list" ui-sref-active="active">
-        <span class="fa fa-cogs"></span> Cấu Hình
-    </a>
-</li>
-//Add_Here
+        //Add_Here
     </ul>
 </aside>
 <section class="right-section">
