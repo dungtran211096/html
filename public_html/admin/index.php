@@ -40,23 +40,6 @@
                 <span class="fa fa-files-o"></span> Quản Lý Files
             </a>
         </li>
-        <li class="has-child" ng-class="{expanded:$state.includes('documents')}">
-            <a ng-click="expand($event)" ng-class="{active:$state.includes('documents')}">
-                <span class="fa fa-newspaper-o"></span> Tài Liệu
-            </a>
-            <ul>
-                <li ui-sref-active="active" ui-sref="documents.cat.list">
-                    <a>
-                        <span class="fa fa-folder-open-o"></span> Danh Mục Tài Liệu
-                    </a>
-                </li>
-                <li ui-sref-active="active" ui-sref="documents.list">
-                    <a>
-                        <span class="fa fa-list-ol"></span> Danh Sách Tài Liệu
-                    </a>
-                </li>
-            </ul>
-        </li>
         <li>
             <a ui-sref="users.list" ui-sref-active="active">
                 <span class="fa fa-users"></span> Quản Trị Viên
