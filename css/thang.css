@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+}
+
+header nav .navbar-header img {
+  width: 100px;
+  height: 100%;
+}
+
+header nav .chua-dang-nhap {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+header nav .chua-dang-nhap button.btn {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header nav .dang-nhap {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+header nav .dang-nhap li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header nav .dang-nhap li a {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+header nav .dang-nhap li a:hover {
+  color: #1abc9c;
+}
+
+header nav .dang-nhap li + li:before {
+  content: '|';
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 10px;
+}
