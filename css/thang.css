@@ -281,6 +281,23 @@ section.main .chuyen-trang .trang-sau:after {
   margin-left: 5px;
 }
 
+section.thong-tin .thong-tin-ca-nhan {
+  font-size: 35px;
+}
+
+section.thong-tin .thong-tin-co-ban {
+  margin-top: 30px;
+}
+
+section.thong-tin .thong-tin-co-ban .anh-dai-dien img {
+  width: 100%;
+}
+
+section.thong-tin .thong-tin-co-ban .ten-va-truong p {
+  font-size: 17px;
+  font-weight: bold;
+}
+
 .bx-wrapper .bx-viewport {
   left: 0;
   border: none;
