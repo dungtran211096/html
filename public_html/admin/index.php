@@ -68,16 +68,11 @@
             </a>
         </li>
         <li>
-    <a ui-sref="scholls.list" ui-sref-active="active">
-        <span class="fa fa-cogs"></span> Cấu Hình
-    </a>
-</li>
-<li>
-    <a ui-sref="schools.list" ui-sref-active="active">
-        <span class="fa fa-cogs"></span> Cấu Hình
-    </a>
-</li>
-//Add_Here
+            <a ui-sref="schools.list" ui-sref-active="active">
+                <span class="fa fa-graduation-cap"></span> Trường
+            </a>
+        </li>
+        //Add_Here
     </ul>
 </aside>
 <section class="right-section">
