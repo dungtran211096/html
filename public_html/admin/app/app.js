@@ -98,6 +98,30 @@ vinasem.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
         url: '/:id/chinh-sua',
         controller: 'EditArticleCtr'
     })
+       /*
+     Questions Route
+     */
+.state('questions', {
+    abstract: true,
+    template: '<div ui-view></div>',
+    url: '/question',
+    controller: 'QuestionsCtr'
+})
+    .state('questions.list', {
+        templateUrl: 'app/views/questions/index.html',
+        url: '',
+        controller: 'ListQuestionsCtr'
+    })
+    .state('questions.create', {
+        templateUrl: 'app/views/questions/create.html',
+        url: '/tao-moi',
+        controller: 'CreateQuestionCtr'
+    })
+    .state('questions.update', {
+        templateUrl: 'app/views/questions/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'UpdateQuestionCtr'
+    })
     //Add_Here
 });
 

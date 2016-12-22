@@ -1,4 +1,4 @@
 .idea
 .env
 /vendor
-/public/admin/js/config.js
+/public_html/admin/js/config.js

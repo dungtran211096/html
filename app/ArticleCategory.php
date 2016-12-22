@@ -47,8 +47,8 @@ class ArticleCategory extends BaseModel
     public static function boot()
     {
         parent::boot();
-        Article::deleting(function ($category) {
-            Article::child($category->id)->get()->each(function ($child) {
+        ArticleCategory::deleting(function ($category) {
+            ArticleCategory::child($category->id)->get()->each(function ($child) {
                 $child->delete();
             });
             ArticleCategoryRelation::where('category_id', $category['id'])->delete();

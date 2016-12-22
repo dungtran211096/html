@@ -5,18 +5,13 @@ namespace App;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Article extends BaseModel
+class Question extends BaseModel
 {
     use Sluggable, SluggableScopeHelpers;
-    protected $table = 'articles';
+    protected $table = 'questions';
     protected $fillable = [
         'title', 'image', 'image_name', 'active', 'name', 'content', 'excerpt', 'description', 'keyword', 'slug'
     ];
-
-    public function categories()
-    {
-        return $this->belongsToMany(ArticleCategory::class, 'article_category_relations');
-    }
 
     public function sluggable()
     {
@@ -25,13 +20,5 @@ class Article extends BaseModel
                 'source' => 'name'
             ]
         ];
-    }
-
-    public static function boot()
-    {
-        parent::boot();
-        Article::deleting(function ($article) {
-            ArticleCategoryRelation::where('article_id', $article['id'])->delete();
-        });
     }
 }

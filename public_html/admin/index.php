@@ -62,6 +62,11 @@
         </li>
     </ul>
 </li>
+<li>
+    <a ui-sref="questions.list" ui-sref-active="active">
+        <span class="fa fa-cogs"></span> Cấu Hình
+    </a>
+</li>
 //Add_Here
     </ul>
 </aside>

@@ -69,5 +69,13 @@ Route::resource('articles', 'ArticlesController');
 Route::delete('articles', 'ArticlesController@destroys');
 Route::get('articles/{id}/active', 'ArticlesController@active');
 
+/*
+* Question Routes
+*/
+Route::get('questions/actives', 'QuestionsController@actives');
+Route::resource('questions', 'QuestionsController');
+Route::delete('questions', 'QuestionsController@destroys');
+Route::get('questions/{id}/active', 'QuestionsController@active');
+
 //Add_Here
 });
