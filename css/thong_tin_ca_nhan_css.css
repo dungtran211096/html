@@ -1,8 +1,11 @@
-.btn-group{
+.group{
     width: 100%;
-    background-color: #bdc3c7;
-
+    margin-top: 30px;
+    list-style-type: none;
 }
-.dropdown-menu{
-    width: 100%;
+.group ul{
+    list-style-type: none;
+}
+.group ul li+li{
+    margin-top:0px;
 }
