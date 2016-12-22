@@ -2,7 +2,7 @@
     <div class="section-title">
         <h3>
             <span class="fa fa-folder-open"></span>
-            Danh Sách Bài Viết
+            Danh Sách Câu Hỏi
         </h3>
 
         <ul id="action">
@@ -19,25 +19,14 @@
         <tr>
             <th ng-click="checkAll()"><input type="checkbox" ng-model="isCheckAll"></th>
             <th>STT</th>
-            <th>Tên Bài Viết</th>
-            <th>Thuộc</th>
-            <th>Nổi Bật</th>
-            <th>Quan Tâm</th>
+            <th>Tên Câu Hỏi</th>
             <th>Cập Nhật</th>
-            <th>Lượt Xem</th>
             <th class="text-center col-xs-2">Xử Lý</th>
         </tr>
         <tr ng-repeat="record in records">
             <td><input type="checkbox" ng-model="check[$index]"></td>
             <td class="text-center">{{record.id}}</td>
             <td style="max-width: 250px">{{record.name}}</td>
-            <td class="categories" style="max-width: 200px">
-                <ul>
-                    <li ng-repeat="name in record.categoryNames">{{name}}</li>
-                </ul>
-            </td>
-            <td><input type="checkbox" ng-click="hot($index)" ng-model="record.hot"></td>
-            <td><input type="checkbox" ng-click="featured($index)" ng-model="record.featured"></td>
             <td>{{record.updated_at}}</td>
             <td>{{record.view}}</td>
             <td class="text-center">
