@@ -66,6 +66,134 @@ footer
       margin: 0px
       font-size: 30px
       color: #333333
+section.main
+    margin-top: 30px
+    h1.tieu-de
+      font-size: 20px
+      margin: 0px
+      margin-bottom: 40px
+      .noidung
+        background-color: #2b78e4
+        color: #ffffff
+        padding: 10px
+        border-radius: 3px
+    ul.danh-sach
+      list-style-type: none
+      padding: 0px
+      li.bai-dang
+        border: 1px solid rgba(220, 183, 163, 0.13)
+        padding: 10px
+        -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5)
+        -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+        margin-bottom: 20px
+        h3
+          font-size: 20px
+          color: #333333
+        .anh-dai-dien
+          img
+            width: 100%
+        .noi-dung-bai-dang
+          font-size: 15px
+          max-height: 150px
+          overflow: hidden
+        .ngay-dang
+          font-size: 13px
+          color: #333333
+          float: left
+          margin-left: 15px
+          margin-right: 15px
+          &:before
+            content: '\f017'
+            font-family: "FontAwesome"
+            font-size: 15px
+            margin-right: 5px
+        ul.tag
+          float: left
+          padding: 0px
+          &:before
+            content: '\f07b'
+            font-family: "FontAwesome"
+            font-size: 15px
+            margin-right: 5px
+          li
+            display: inline-block
+            a
+              font-size: 14px
+              color: #333333
+          li+li:before
+            content: ','
+            font-size: 14px
+            margin-right: 3px
+        .xem-them
+          float: right
+          margin-right: 15px
+    ul.ben-phai
+      list-style-type: none
+      padding: 0px
+      li
+        border: 1px solid rgba(220, 183, 163, 0.13)
+        -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5)
+        -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+        margin-bottom: 20px
+        &:first-child
+          display: block
+          img
+            width: 100%
+          a
+            margin-left: 10px
+            margin-bottom: 5px
+            margin-top: 10px
+        &:last-child
+          text-align: center
+          img
+            width: 50%
+        &:nth-child(2)
+          ul.su-kien
+            list-style-type: none
+            padding: 0px
+            li
+              border: none
+              -moz-box-shadow: none
+              -webkit-box-shadow: none
+              box-shadow: none
+              text-align: left
+              max-height: 25px
+              overflow: hidden
+              a
+                font-size: 15px
+                color: #333333
+                margin-left: 10px
+                font-weight: 700
+        &:nth-child(3)
+          iframe
+            width: 100%
+            height: 200px
+
+
+
+        .tieu-de-phai
+          text-align: left
+          margin: 0px
+          background-color: #dedede
+          border-top: 2px solid #015198
+          font-size: 25px
+          padding: 10px
+          margin-bottom: 20px
+    .chuyen-trang
+      margin-bottom: 30px
+      a
+        color: #333333
+      .trang-truoc
+        float: left
+        margin-left: 30px
+      .trang-sau
+        float: right
+        margin-right: 30px
+
+
+
 .bx-wrapper
   .bx-viewport
     left: 0
