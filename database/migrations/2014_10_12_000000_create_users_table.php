@@ -21,6 +21,13 @@ class CreateUsersTable extends Migration
             $table->boolean('admin');
             $table->boolean('active');
             $table->string('password');
+            $table->string('msv');
+            $table->string('birthday');
+            $table->string('uni');
+            $table->string('school_year');
+            $table->string('faculty');
+            $table->string('dd_renluyen');
+            $table->string('ht_gpa');
             $table->rememberToken();
             $table->timestamps();
         });

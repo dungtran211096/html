@@ -54,7 +54,7 @@
         </li>
         <li>
             <a ui-sref="users.list" ui-sref-active="active">
-                <span class="fa fa-users"></span> Quản Trị Viên
+                <span class="fa fa-users"></span> Thành Viên
             </a>
         </li>
         <li class="has-child" ng-class="{expanded:$state.includes('articles')}">
