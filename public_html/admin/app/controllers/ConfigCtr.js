@@ -1,5 +1,12 @@
 vinasem.controller('ConfigCtr', function ($rootScope, $scope, Api) {
     $scope.title = 'Cấu Hình';
+    $scope.infoType = {
+        dd: 'Đạo Đức',
+        ht: 'Học Tập',
+        tl: 'Thể Lực',
+        tn: 'Tình Nguyện',
+        hn: 'Hội Nhập'
+    };
     $rootScope.data = {};
     $scope.editorType = 'mini';
     $scope.getOptions = function () {
@@ -11,12 +18,32 @@ vinasem.controller('ConfigCtr', function ($rootScope, $scope, Api) {
     };
     $scope.getOptions();
     $scope.beforeSubmit = function () {
-        console.log($scope.data);
         Api.post('options/save', JSON.stringify($scope.data)).then(function () {
             Api.success('Đã Sửa!');
             //$scope.getOptions();
         }, function () {
             Api.error('Lỗi hệ thống, vui lòng tải lại trang!');
         });
+    };
+    function getUniqueId(type) {
+        var i = 'key' + 1;
+        for (i in $scope.data[type]) {
+        }
+        var a = Number(i.substr(3));
+        while (typeof $scope.data[type]['key' + a] !== 'undefined') {
+            a++;
+        }
+        return 'key' + a;
+    }
+
+    $scope.add = function (input, type) {
+        if (typeof $scope.data[type] === 'undefined') {
+            $scope.data[type] = {};
+        }
+        var i = getUniqueId(type);
+        $scope.data[type][i] = input;
+    };
+    $scope.remove = function (key, type) {
+        delete $scope.data[type][key];
     }
 });

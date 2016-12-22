@@ -1,692 +1,717 @@
 @font-face {
-  font-family: Tahoma;
-  src: url("../fonts/tahoma/tahoma.ttf");
+    font-family: Tahoma;
+    src: url("../fonts/tahoma/tahoma.ttf");
 }
 
 body {
-  font-family: Tahoma;
-  display: flex;
+    font-family: Tahoma;
+    display: flex;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .left {
-  float: left;
+    float: left;
 }
 
 .right {
-  float: right;
+    float: right;
 }
 
 a:hover, a {
-  cursor: pointer;
-  text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .d-btn {
-  color: #fefefe;
-  padding: 5px 15px;
-  min-width: 80px;
-  border: none;
-  background-color: #cccccc;
+    color: #fefefe;
+    padding: 5px 15px;
+    min-width: 80px;
+    border: none;
+    background-color: #cccccc;
 }
 
 .d-btn .fa {
-  color: #ffffff;
-  font-size: 17px;
+    color: #ffffff;
+    font-size: 17px;
 }
 
 .form-input {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  clear: both;
-  display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    clear: both;
+    display: flex;
 }
 
 .d-input {
-  font-size: 13px;
-  margin-top: 15px;
-  border: 1px solid #dfdfdf;
-  padding: 10px;
-  width: 100%;
+    font-size: 13px;
+    margin-top: 15px;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    width: 100%;
 }
 
 .d-input:focus {
-  outline: 0;
+    outline: 0;
 }
 
 label {
-  margin-top: 25px;
-  float: right;
-  color: #333333;
-  font-weight: normal;
-  font-size: 15px;
+    margin-top: 25px;
+    float: right;
+    color: #333333;
+    font-weight: normal;
+    font-size: 15px;
 }
 
 .d-success {
-  background-color: #07b63d;
+    background-color: #07b63d;
 }
 
 .d-danger {
-  background-color: #df0000;
+    background-color: #df0000;
 }
 
 .d-warning {
-  background-color: #fe9b00;
+    background-color: #fe9b00;
 }
 
 .d-default {
-  background-color: #cccccc;
-  color: #333333;
+    background-color: #cccccc;
+    color: #333333;
 }
 
 input[type="checkbox"] {
-  background: transparent;
-  height: 15px;
-  width: 15px;
-  border: 1px solid #cccccc;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+    background: transparent;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #cccccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
 
 input[type="checkbox"]:focus {
-  outline: none;
+    outline: none;
 }
 
 input[type="checkbox"]:checked {
-  position: relative;
-  border: 0;
+    position: relative;
+    border: 0;
 }
 
 input[type="checkbox"]:checked:before {
-  display: block;
-  position: absolute;
-  content: "\f046";
-  font-family: FontAwesome;
-  font-size: 20px;
-  top: -3px;
-  left: -1px;
+    display: block;
+    position: absolute;
+    content: "\f046";
+    font-family: FontAwesome;
+    font-size: 20px;
+    top: -3px;
+    left: -1px;
 }
 
 .ng-toast.ng-toast--right .ng-toast__list {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .sub-icon {
-  background: url("../images/sub-icon.png") no-repeat center center;
-  height: 20px;
-  width: 20px;
-  display: inline-block;
+    background: url("../images/sub-icon.png") no-repeat center center;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
 }
 
 #categories {
-  border: 1px solid #dcdcdc;
-  padding: 20px;
-  margin-left: 15px;
-  width: calc(75% - 30px);
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    margin-left: 15px;
+    width: calc(75% - 30px);
 }
 
 #categories > div {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #categories ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 #categories ul input[type="checkbox"] {
-  margin-top: 5px;
-  height: 20px;
-  width: 20px;
-  margin-right: 5px;
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
 }
 
 aside {
-  background-color: #14191e;
-  width: 21%;
+    background-color: #14191e;
+    width: 21%;
 }
 
 aside .logo {
-  width: 20%;
-  margin: auto;
-  padding: 18px 0;
+    width: 20%;
+    margin: auto;
+    padding: 18px 0;
 }
 
 aside .logo img {
-  width: 100%;
+    width: 100%;
 }
 
 aside .admin-info {
-  display: flex;
-  background-color: #1b2025;
-  padding: 18px;
+    display: flex;
+    background-color: #1b2025;
+    padding: 18px;
 }
 
 aside .admin-info .avatar {
-  margin: auto;
-  width: 25%;
-  background-color: #ebebeb;
-  padding: 3px;
-  border-radius: 50%;
-  text-align: center;
+    margin: auto;
+    width: 25%;
+    background-color: #ebebeb;
+    padding: 3px;
+    border-radius: 50%;
+    text-align: center;
 }
 
 aside .admin-info .avatar img {
-  border-radius: 50%;
-  width: 100%;
+    border-radius: 50%;
+    width: 100%;
 }
 
 aside .admin-info .info {
-  margin: auto;
-  font-size: 13px;
-  color: #f9f9f9;
+    margin: auto;
+    font-size: 13px;
+    color: #f9f9f9;
 }
 
 aside .admin-info .info span {
-  color: #f89c28;
+    color: #f89c28;
 }
 
 aside .admin-info .info strong {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 aside ul#menu {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
 }
 
 aside ul#menu > li {
-  margin: 20px auto;
+    margin: 20px auto;
 }
 
 aside ul#menu > li a, aside ul#menu > li a:hover {
-  width: 100%;
-  padding: 10px 15px;
-  display: block;
-  color: #e7e7e7;
-  text-decoration: none;
-  font-size: 16px;
+    width: 100%;
+    padding: 10px 15px;
+    display: block;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 aside ul#menu > li .fa {
-  font-size: 25px;
-  width: 20%;
+    font-size: 25px;
+    width: 20%;
 }
 
 aside ul#menu > li a.active {
-  background-color: #6db908;
+    background-color: #6db908;
 }
 
 aside ul#menu > li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 20px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
 }
 
 aside ul#menu > li.has-child > a {
-  position: relative;
+    position: relative;
 }
 
 aside ul#menu > li.has-child > a:after {
-  content: "\f054";
-  font-family: FontAwesome;
-  position: absolute;
-  font-size: 16px;
-  color: #e7e7e7;
-  top: 15px;
-  right: 15px;
+    content: "\f054";
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 16px;
+    color: #e7e7e7;
+    top: 15px;
+    right: 15px;
 }
 
 aside ul#menu > li.has-child ul {
-  display: none;
-  padding: 10px 0;
+    display: none;
+    padding: 10px 0;
 }
 
 aside ul#menu > li.has-child ul li {
-  padding: 10px 0;
-  margin: 0;
+    padding: 10px 0;
+    margin: 0;
 }
 
 aside ul#menu > li.has-child ul li.active {
-  position: relative;
+    position: relative;
 }
 
 aside ul#menu > li.has-child ul li.active:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  top: 6px;
-  bottom: 6px;
-  background-color: #6db908;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    top: 6px;
+    bottom: 6px;
+    background-color: #6db908;
 }
 
 aside ul#menu > li.has-child ul li a {
-  margin-left: 30px;
-  font-size: 15px;
+    margin-left: 30px;
+    font-size: 15px;
 }
 
 aside ul#menu > li.has-child ul li a .fa {
-  width: 10%;
-  font-size: 15px;
+    width: 10%;
+    font-size: 15px;
 }
 
 aside ul#menu > li.expanded ul {
-  display: block;
+    display: block;
 }
 
 aside ul#menu > li.expanded > a:after {
-  content: "\f078";
+    content: "\f078";
 }
 
 aside ul#menu > li.m-expanded ul {
-  display: block;
+    display: block;
 }
 
 aside.mini {
-  width: 5%;
+    width: 5%;
 }
 
 aside.mini .logo {
-  width: 80%;
+    width: 80%;
 }
 
 aside.mini .admin-info {
-  display: none;
+    display: none;
 }
 
 aside.mini ul#menu li {
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
 }
 
 aside.mini ul#menu li a, aside.mini ul#menu li a:hover {
-  font-size: 0;
+    font-size: 0;
 }
 
 aside.mini ul#menu li a .fa, aside.mini ul#menu li a:hover .fa {
-  width: auto;
-  margin: auto;
-  font-size: 35px;
-  display: block;
+    width: auto;
+    margin: auto;
+    font-size: 35px;
+    display: block;
 }
 
 aside.mini ul#menu li.has-child {
-  position: relative;
+    position: relative;
 }
 
 aside.mini ul#menu li.has-child > a {
-  position: static;
+    position: static;
 }
 
 aside.mini ul#menu li.has-child > a:after {
-  content: "";
+    content: "";
 }
 
 aside.mini ul#menu li.has-child ul {
-  position: absolute;
-  padding: 10px 0;
-  width: 210px;
-  background-color: #14191e;
-  left: 100%;
-  top: 0;
+    position: absolute;
+    padding: 10px 0;
+    width: 210px;
+    background-color: #14191e;
+    left: 100%;
+    top: 0;
 }
 
 aside.mini ul#menu li.has-child ul li {
-  padding: 10px 0;
-  margin: 0;
+    padding: 10px 0;
+    margin: 0;
 }
 
 aside.mini ul#menu li.has-child ul li.active {
-  position: relative;
+    position: relative;
 }
 
 aside.mini ul#menu li.has-child ul li.active:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #6db908;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6db908;
 }
 
 aside.mini ul#menu li.has-child ul li a {
-  margin-left: 0;
-  display: block;
-  font-size: 15px;
+    margin-left: 0;
+    display: block;
+    font-size: 15px;
 }
 
 aside.mini ul#menu li.has-child ul li a .fa {
-  display: none;
-  width: 10%;
-  font-size: 15px;
+    display: none;
+    width: 10%;
+    font-size: 15px;
 }
 
 aside.mini ul#menu li.has-child.expanded ul {
-  display: none;
+    display: none;
 }
 
 section.right-section {
-  background-color: #f1f3fa;
-  width: 100%;
+    background-color: #f1f3fa;
+    width: 100%;
 }
 
 section.right-section .form-content {
-  padding: 30px;
-  background-color: #fff;
-  margin: 25px;
+    padding: 30px;
+    background-color: #fff;
+    margin: 25px;
 }
 
 section.right-section .form-content input[type="checkbox"] {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 section.right-section .form-content textarea {
-  height: 100px;
+    height: 100px;
 }
 
 section.right-section .form-content .featured-image {
-  display: flex;
+    display: flex;
 }
 
 section.right-section .form-content .featured-image .image {
-  margin-right: 15px;
-  display: flex;
-  float: left;
-  border: 1px solid #dedede;
-  height: 80px;
-  width: 100px;
+    margin-right: 15px;
+    display: flex;
+    float: left;
+    border: 1px solid #dedede;
+    height: 80px;
+    width: 100px;
 }
 
 section.right-section .form-content .featured-image .image img {
-  margin: auto;
-  height: 70px;
-  width: 90px;
+    margin: auto;
+    height: 70px;
+    width: 90px;
 }
 
 section.right-section .form-content .featured-image button {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 section.right-section .top-menu {
-  height: 47px;
-  width: 100%;
-  background-color: #ebebeb;
-  border-bottom: 1px solid #cccccc;
-  padding: 10px 30px;
+    height: 47px;
+    width: 100%;
+    background-color: #ebebeb;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 30px;
 }
 
 section.right-section .top-menu ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 section.right-section .top-menu ul li {
-  display: inline;
+    display: inline;
 }
 
 section.right-section .top-menu ul li .fa {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 section.right-section .top-menu ul.left li + li {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
 section.right-section .top-menu ul.left li:nth-of-type(1) a {
-  color: #000000;
+    color: #000000;
 }
 
 section.right-section .top-menu ul.left li:nth-of-type(2) a {
-  color: #fc0006;
+    color: #fc0006;
 }
 
 section.right-section .top-menu ul.left li:nth-of-type(3) a {
-  vertical-align: middle;
-  color: #333333;
-  font-size: 13px;
+    vertical-align: middle;
+    color: #333333;
+    font-size: 13px;
 }
 
 section.right-section .top-menu ul.left li:nth-of-type(3) a .fa {
-  font-size: 25px;
-  color: #4a97e5;
+    font-size: 25px;
+    color: #4a97e5;
 }
 
 section.right-section .top-menu ul.right li {
-  margin-right: 25px;
+    margin-right: 25px;
 }
 
 section.right-section .top-menu ul.right li a {
-  color: #5a738e;
+    color: #5a738e;
 }
 
 section.right-section .section-title {
-  width: 100%;
-  height: 60px;
-  padding: 12px 60px 12px 25px;
-  display: flex;
-  border-bottom: 1px solid #cccccc;
+    width: 100%;
+    height: 60px;
+    padding: 12px 60px 12px 25px;
+    display: flex;
+    border-bottom: 1px solid #cccccc;
 }
 
 section.right-section .section-title h3 {
-  font-weight: bold;
-  color: #146295;
-  font-size: 20px;
-  margin: auto 0;
+    font-weight: bold;
+    color: #146295;
+    font-size: 20px;
+    margin: auto 0;
 }
 
 section.right-section .section-title h3 .fa {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 section.right-section .section-title ul#action {
-  margin: auto 0 auto auto;
+    margin: auto 0 auto auto;
 }
 
 section.right-section .section-title ul#action.fixed {
-  background-color: #ebebeb;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-  right: 30px;
-  padding: 15px;
-  opacity: .5;
+    background-color: #ebebeb;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    right: 30px;
+    padding: 15px;
+    opacity: .5;
 }
 
 section.right-section .section-title ul#action.fixed:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 section.right-section .section-title ul#action li {
-  display: inline;
+    display: inline;
 }
 
 section.right-section .section-title ul#action li button {
-  color: #fe9b00;
-  background: transparent;
-  border: none;
-  font-size: 16px;
+    color: #fe9b00;
+    background: transparent;
+    border: none;
+    font-size: 16px;
 }
 
 section.right-section .section-title ul#action li button .fa {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 section.right-section .section-title ul#action li button:focus {
-  outline: 0;
+    outline: 0;
 }
 
 section.right-section .section-title ul#action li button.submit {
-  color: #024b7a;
+    color: #024b7a;
 }
 
 section.right-section .section-title ul#action li button.reset {
-  color: #46ae01;
+    color: #46ae01;
 }
 
 section.right-section .section-title ul#action li button.cancel {
-  color: #f50000;
+    color: #f50000;
 }
 
 section.right-section .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 section.right-section table {
-  margin: 25px 30px 5px 25px;
-  width: calc(100% - 30px - 25px);
-  padding-bottom: 20px;
-  border-bottom: 1px solid transparent;
+    margin: 25px 30px 5px 25px;
+    width: calc(100% - 30px - 25px);
+    padding-bottom: 20px;
+    border-bottom: 1px solid transparent;
 }
 
 section.right-section table a.active {
-  color: #309100;
+    color: #309100;
 }
 
 section.right-section table a {
-  color: #cccccc;
+    color: #cccccc;
 }
 
 section.right-section table a + a {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 section.right-section table td, section.right-section table th {
-  padding: 20px 10px;
+    padding: 20px 10px;
 }
 
 section.right-section table td .fa, section.right-section table th .fa {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 section.right-section table td .fa-wrench, section.right-section table th .fa-wrench {
-  color: #0778c0;
+    color: #0778c0;
 }
 
 section.right-section table td .fa-close, section.right-section table th .fa-close {
-  color: #f80000;
+    color: #f80000;
 }
 
 section.right-section table .categories ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 section.right-section table .categories ul li:after {
-  content: " |";
+    content: " |";
 }
 
 section.right-section table .categories ul li:last-child:after {
-  content: "";
+    content: "";
 }
 
 section.right-section .paginate {
-  background-color: #fff;
-  margin-left: 25px;
-  margin-right: 30px;
-  padding-top: 20px;
-  height: 100px;
+    background-color: #fff;
+    margin-left: 25px;
+    margin-right: 30px;
+    padding-top: 20px;
+    height: 100px;
 }
 
 section.right-section .paginate .left {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 section.right-section .paginate .left li {
-  margin-left: 10px;
-  display: inline;
+    margin-left: 10px;
+    display: inline;
 }
 
 section.right-section .paginate .right {
-  margin: 0 30px 0 0;
+    margin: 0 30px 0 0;
 }
 
 @media screen and (max-width: 768px) {
-  aside {
-    display: none;
-  }
-  aside.mini {
-    z-index: 999;
-    display: block;
-    width: 20%;
-  }
-  section.right-section .top-menu {
-    padding: 10px 15px;
-  }
-  section.right-section .top-menu ul.left li:nth-of-type(3) a {
-    font-size: 0;
-    vertical-align: top;
-  }
-  section.right-section .top-menu ul.left li + li {
-    margin-left: 30px;
-  }
-  section.right-section .top-menu ul.right li {
-    margin-right: 0;
-  }
-  section.right-section .top-menu ul.right li + li {
-    margin-left: 20px;
-  }
-  section.right-section .form-content {
-    margin: 15px;
-    padding: 15px;
-  }
-  section.right-section .section-title {
-    padding: 15px;
-  }
-  section.right-section .section-title ul#action {
-    padding-left: 0;
-  }
-  section.right-section .section-title ul#action li button {
-    font-size: 0;
-  }
-  section.right-section .section-title ul#action li + li {
-    margin-left: 20px;
-  }
-  section.right-section .form-input {
-    display: block;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  section.right-section .form-input label {
-    float: none;
-    text-align: left;
-  }
-  section.right-section table, section.right-section tr, section.right-section td, section.right-section th, section.right-section tbody {
-    display: block;
-    text-align: center;
-  }
-  section.right-section table {
-    width: calc(100% - 30px);
-    margin: auto;
-  }
-  section.right-section table th, section.right-section table td {
-    padding: 10px;
-  }
-  section.right-section table tr {
-    position: relative;
-    min-height: 50px;
-  }
-  section.right-section table tr td:first-child, section.right-section table tr td:nth-of-type(2) {
-    position: absolute;
-    display: block;
-  }
-  section.right-section table tr td:nth-of-type(2) {
-    top: 20px;
-    left: 3px;
-  }
-  section.right-section table tr td {
-    text-align: left;
-    display: none;
-  }
-  section.right-section table tr td.main-td {
-    margin-left: 30px;
-    display: block;
-    font-weight: bold;
-    font-size: 16px;
-  }
+    aside {
+        display: none;
+    }
+
+    aside.mini {
+        z-index: 999;
+        display: block;
+        width: 20%;
+    }
+
+    section.right-section .top-menu {
+        padding: 10px 15px;
+    }
+
+    section.right-section .top-menu ul.left li:nth-of-type(3) a {
+        font-size: 0;
+        vertical-align: top;
+    }
+
+    section.right-section .top-menu ul.left li + li {
+        margin-left: 30px;
+    }
+
+    section.right-section .top-menu ul.right li {
+        margin-right: 0;
+    }
+
+    section.right-section .top-menu ul.right li + li {
+        margin-left: 20px;
+    }
+
+    section.right-section .form-content {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    section.right-section .section-title {
+        padding: 15px;
+    }
+
+    section.right-section .section-title ul#action {
+        padding-left: 0;
+    }
+
+    section.right-section .section-title ul#action li button {
+        font-size: 0;
+    }
+
+    section.right-section .section-title ul#action li + li {
+        margin-left: 20px;
+    }
+
+    section.right-section .form-input {
+        display: block;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    section.right-section .form-input label {
+        float: none;
+        text-align: left;
+    }
+
+    section.right-section table, section.right-section tr, section.right-section td, section.right-section th, section.right-section tbody {
+        display: block;
+        text-align: center;
+    }
+
+    section.right-section table {
+        width: calc(100% - 30px);
+        margin: auto;
+    }
+
+    section.right-section table th, section.right-section table td {
+        padding: 10px;
+    }
+
+    section.right-section table tr {
+        position: relative;
+        min-height: 50px;
+    }
+
+    section.right-section table tr td:first-child, section.right-section table tr td:nth-of-type(2) {
+        position: absolute;
+        display: block;
+    }
+
+    section.right-section table tr td:nth-of-type(2) {
+        top: 20px;
+        left: 3px;
+    }
+
+    section.right-section table tr td {
+        text-align: left;
+        display: none;
+    }
+
+    section.right-section table tr td.main-td {
+        margin-left: 30px;
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+    }
 }

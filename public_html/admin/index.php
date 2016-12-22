@@ -32,17 +32,17 @@
     <ul id="menu">
         <li class="has-child" ng-class="{expanded:$state.includes('config')}">
             <a ng-click="expand($event)" ng-class="{active:$state.includes('config')}">
-                <span class="fa fa-newspaper-o"></span> Cấu Hình
+                <span class="fa fa-cogs"></span> Cấu Hình
             </a>
             <ul>
                 <li ui-sref-active="active" ui-sref="config.general">
                     <a>
-                        <span class="fa fa-folder-open-o"></span> Cài Đặt Chung
+                        <span class="fa fa-cog"></span> Cài Đặt Chung
                     </a>
                 </li>
                 <li ui-sref-active="active" ui-sref="config.userInfo">
                     <a>
-                        <span class="fa fa-list-ol"></span> Thông Tin Sinh Viên
+                        <span class="fa fa-user"></span> Thông Tin Sinh Viên
                     </a>
                 </li>
             </ul>

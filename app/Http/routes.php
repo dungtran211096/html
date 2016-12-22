@@ -54,35 +54,35 @@ Route::group([
     Route::delete('users', 'UsersController@destroys');
     Route::get('users/{id}/active', 'UsersController@active');
 
-/*
-* Article Category Routes
-*/
-Route::get('article-categories/actives', 'ArticleCategoriesController@actives');
-Route::resource('article-categories', 'ArticleCategoriesController');
-Route::delete('article-categories', 'ArticleCategoriesController@destroys');
-Route::get('article-categories/{id}/active', 'ArticleCategoriesController@active');
-/*
-* Article Routes
-*/
-Route::get('articles/actives', 'ArticlesController@actives');
-Route::resource('articles', 'ArticlesController');
-Route::delete('articles', 'ArticlesController@destroys');
-Route::get('articles/{id}/active', 'ArticlesController@active');
+    /*
+    * Article Category Routes
+    */
+    Route::get('article-categories/actives', 'ArticleCategoriesController@actives');
+    Route::resource('article-categories', 'ArticleCategoriesController');
+    Route::delete('article-categories', 'ArticleCategoriesController@destroys');
+    Route::get('article-categories/{id}/active', 'ArticleCategoriesController@active');
+    /*
+    * Article Routes
+    */
+    Route::get('articles/actives', 'ArticlesController@actives');
+    Route::resource('articles', 'ArticlesController');
+    Route::delete('articles', 'ArticlesController@destroys');
+    Route::get('articles/{id}/active', 'ArticlesController@active');
 
-/*
-* Question Routes
-*/
-Route::get('questions/actives', 'QuestionsController@actives');
-Route::resource('questions', 'QuestionsController');
-Route::delete('questions', 'QuestionsController@destroys');
-Route::get('questions/{id}/active', 'QuestionsController@active');
-/*
-* School Routes
-*/
-Route::get('schools/actives', 'SchoolsController@actives');
-Route::resource('schools', 'SchoolsController');
-Route::delete('schools', 'SchoolsController@destroys');
-Route::get('schools/{id}/active', 'SchoolsController@active');
+    /*
+    * Question Routes
+    */
+    Route::get('questions/actives', 'QuestionsController@actives');
+    Route::resource('questions', 'QuestionsController');
+    Route::delete('questions', 'QuestionsController@destroys');
+    Route::get('questions/{id}/active', 'QuestionsController@active');
+    /*
+    * School Routes
+    */
+    Route::get('schools/actives', 'SchoolsController@actives');
+    Route::resource('schools', 'SchoolsController');
+    Route::delete('schools', 'SchoolsController@destroys');
+    Route::get('schools/{id}/active', 'SchoolsController@active');
 
 //Add_Here
 });
