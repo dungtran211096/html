@@ -13,13 +13,19 @@
 
     <link rel="shortcut icon" href="img/favicon.ico">
 
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
     <script src="./js/vendor/html5shiv.js"></script>
     <script src="./js/vendor/respond.min.js"></script>
     <![endif]-->
-
+    <!--    BxSlider-->
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="./js/bxslider/jquery.bxslider.css">
+    <script src="./js/bxslider/jquery.bxslider.min.js"></script>
+    <!--    End BxSlider-->
     <link rel="stylesheet" href="./css/thang.css">
+
 </head>
 <body>
 <header>
@@ -49,6 +55,14 @@
             </div>
         </div>
     </nav>
+    <div class="banner">
+        <ul id="slide">
+            <li><a href="#"><img src="./img/minion.jpg" alt="slide"></a></li>
+            <li><a href="#"><img src="./img/minion.jpg" alt="slide"></a></li>
+            <li><a href="#"><img src="./img/minion.jpg" alt="slide"></a></li>
+            <li><a href="#"><img src="./img/minion.jpg" alt="slide"></a></li>
+        </ul>
+    </div>
 </header>
 
 
@@ -58,6 +72,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./js/vendor/video.js"></script>
 <script src="./js/flat-ui.min.js"></script>
-
+<script src="./js/thang.js"></script>
 </body>
 </html>
