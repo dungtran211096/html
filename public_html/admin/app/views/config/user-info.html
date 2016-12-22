@@ -36,65 +36,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <legend>ĐẠO ĐỨC TỐT</legend>
-                <div class="form-input" ng-repeat="(key,value) in data.dd">
+            <div class="col-md-6" ng-repeat="(typeKey, typeName) in infoType">
+                <legend>{{typeName | uppercase}} TỐT</legend>
+                <div class="form-input" ng-repeat="(key,value) in data[typeKey]">
                     <div class="col-md-9">
-                        <input class="d-input" type="text" ng-model="data.dd[key]">
+                        <input class="d-input" type="text" ng-model="data[typeKey][key]">
                     </div>
                     <div class="col-md-2" style="margin: auto 0;">
-                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, 'dd')"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <legend>HỌC TẬP TỐT</legend>
-                <div class="form-input" ng-repeat="(key,value) in data.ht">
-                    <div class="col-md-9">
-                        <input class="d-input" type="text" ng-model="data.ht[key]">
-                    </div>
-                    <div class="col-md-2" style="margin: auto 0;">
-                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, 'ht')"></i>
+                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, typeKey)"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <legend>THỂ LỰC TỐT</legend>
-                <div class="form-input" ng-repeat="(key,value) in data.tl">
-                    <div class="col-md-9">
-                        <input class="d-input" type="text" ng-model="data.tl[key]">
-                    </div>
-                    <div class="col-md-2" style="margin: auto 0;">
-                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, 'tl')"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <legend>TÌNH NGUYỆN TỐT</legend>
-                <div class="form-input" ng-repeat="(key,value) in data.tn">
-                    <div class="col-md-9">
-                        <input class="d-input" type="text" ng-model="data.tn[key]">
-                    </div>
-                    <div class="col-md-2" style="margin: auto 0;">
-                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, 'tn')"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <legend>HỘI NHẬP TỐT</legend>
-                <div class="form-input" ng-repeat="(key,value) in data.hn">
-                    <div class="col-md-9">
-                        <input class="d-input" type="text" ng-model="data.hn[key]">
-                    </div>
-                    <div class="col-md-2" style="margin: auto 0;">
-                        <i class="fa fa-close fa-2x pointer" ng-click="remove(key, 'hn')"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 </form>

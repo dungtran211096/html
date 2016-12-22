@@ -23,13 +23,16 @@ class UsersController extends ApiController
 
     public function store(UserRequest $request)
     {
-        User::create($request->all());
+        $user = User::create($request->except('data'));
+        $user->newData = $request->get('data');
         return $this->responseNoContent();
     }
 
     public function update($id, UserRequest $request)
     {
-        User::findOrFail($id)->update($request->all());
+        $user = User::findOrFail($id);
+        $user->update($request->except('data'));
+        $user->newData = $request->get('data');
         return $this->responseNoContent();
     }
 
@@ -47,6 +50,7 @@ class UsersController extends ApiController
         }
         return $this->responseNoContent();
     }
+
     public function active($id)
     {
         $this->activeUser($id);

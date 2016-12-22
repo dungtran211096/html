@@ -38,5 +38,18 @@
         <form-input label="Email" model="email"></form-input>
         <form-input label="Hiện" model="active" type="checkbox"></form-input>
         <form-input label="Admin" model="admin" type="checkbox"></form-input>
+
+        <div ng-repeat="(typeKey,typeName) in type">
+            <legend>{{typeName | uppercase}} TỐT</legend>
+            <div class="form-input" ng-repeat="(key,val) in infoType[typeKey]">
+                <div class="col-md-4">
+                    <label>{{val}}</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="d-input" ng-model="data.data[typeKey][key]">
+                </div>
+            </div>
+        </div>
+
     </div>
 </form>

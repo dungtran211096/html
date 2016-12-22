@@ -1,11 +1,11 @@
 vinasem.controller('ConfigCtr', function ($rootScope, $scope, Api) {
     $scope.title = 'Cấu Hình';
     $scope.infoType = {
-        dd: 'Đạo Đức',
-        ht: 'Học Tập',
-        tl: 'Thể Lực',
-        tn: 'Tình Nguyện',
-        hn: 'Hội Nhập'
+        daoduc: 'Đạo Đức',
+        hoctap: 'Học Tập',
+        theluc: 'Thể Lực',
+        tinhnguyen: 'Tình Nguyện',
+        hoinhap: 'Hội Nhập'
     };
     $rootScope.data = {};
     $scope.editorType = 'mini';
