@@ -30,10 +30,22 @@
         </div>
     </div>
     <ul id="menu">
-        <li>
-            <a ui-sref="home" ui-sref-active="active">
-                <span class="fa fa-home"></span> Trang Chủ
+        <li class="has-child" ng-class="{expanded:$state.includes('config')}">
+            <a ng-click="expand($event)" ng-class="{active:$state.includes('config')}">
+                <span class="fa fa-newspaper-o"></span> Cấu Hình
             </a>
+            <ul>
+                <li ui-sref-active="active" ui-sref="config.general">
+                    <a>
+                        <span class="fa fa-folder-open-o"></span> Cài Đặt Chung
+                    </a>
+                </li>
+                <li ui-sref-active="active" ui-sref="config.userInfo">
+                    <a>
+                        <span class="fa fa-list-ol"></span> Thông Tin Sinh Viên
+                    </a>
+                </li>
+            </ul>
         </li>
         <li>
             <a ui-sref="filemanager" ui-sref-active="active">
