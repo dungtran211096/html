@@ -70,6 +70,26 @@ header .banner .gui-ho-so {
   left: 30px;
 }
 
+footer .huong-dan-gui-ho-so ul.cac-buoc {
+  padding: 0px;
+  margin-top: 20px;
+}
+
+footer .huong-dan-gui-ho-so ul.cac-buoc li {
+  display: inline-block;
+  text-align: center;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer .huong-dan-gui-ho-so h3 {
+  text-align: center;
+  margin: 0px;
+  font-size: 30px;
+  color: #333333;
+}
+
 .bx-wrapper .bx-viewport {
   left: 0;
   border: none;
