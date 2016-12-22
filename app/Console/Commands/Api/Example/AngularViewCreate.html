@@ -1,0 +1,33 @@
+<form ng-submit="submit()">
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-folder-open"></span>
+            {{title}}
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button class="submit" type="submit"><span class="fa fa-save"></span> Lưu</button>
+            </li>
+            <li>
+                <button class="reset" ng-click="reset()" type="button"><span class="fa fa-repeat"></span> Reset</button>
+            </li>
+            <li>
+                <button class="cancel" ui-sref="_REPLACE_m.list" type="button">
+                    <span class="fa fa-times-circle"></span> Hủy
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-content">
+        <div class="form-input">
+            <div class="col-md-2">
+                <label for="name"></label>
+            </div>
+            <div class="col-md-4">
+                <input class="d-input" id="name" type="text" ng-model="data.name">
+            </div>
+        </div>
+    </div>
+</form>

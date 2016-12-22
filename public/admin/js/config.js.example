@@ -1,0 +1,2 @@
+const API_URL = "http://lib.uetduy.com/api/v1/";
+const SITE_URL = "http://lib.uetduy.com/";

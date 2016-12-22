@@ -1,0 +1,25 @@
+   /*
+     _REPLACE_mc Route
+     */
+.state('_REPLACE_m', {
+    abstract: true,
+    template: '<div ui-view></div>',
+    url: '/_REPLACE_o',
+    controller: '_REPLACE_mcCtr'
+})
+    .state('_REPLACE_m.list', {
+        templateUrl: 'app/views/_REPLACE_m/index.html',
+        url: '',
+        controller: 'List_REPLACE_mcCtr'
+    })
+    .state('_REPLACE_m.create', {
+        templateUrl: 'app/views/_REPLACE_m/create.html',
+        url: '/tao-moi',
+        controller: 'Create_REPLACE_ocCtr'
+    })
+    .state('_REPLACE_m.update', {
+        templateUrl: 'app/views/_REPLACE_m/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'Update_REPLACE_ocCtr'
+    })
+    //Add_Here

@@ -1,0 +1,42 @@
+<form ng-submit="submit()">
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-folder-open"></span>
+            {{title}}
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button class="submit" type="submit"><span class="fa fa-save"></span> Lưu</button>
+            </li>
+            <li>
+                <button class="reset" ng-click="reset()" type="button"><span class="fa fa-repeat"></span> Reset</button>
+            </li>
+            <li>
+                <button class="cancel" ui-sref="users.list" type="button">
+                    <span class="fa fa-times-circle"></span> Hủy
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-content">
+        <form-input label="Tên đăng nhập" model="username"></form-input>
+        <div class="form-input featured-image">
+            <div class="col-md-2">
+                <label for="avatar">Ảnh Đại Diện</label>
+            </div>
+            <div class="col-md-4">
+                <div class="image">
+                    <img ng-src="{{data.avatar}}">
+                </div>
+
+                <button class="d-btn d-success" type="button" ng-click="finder('Images', 'avatar')">Chọn Ảnh</button>
+                <input class="d-input hidden" id="avatar" type="text" ng-model="data.avatar">
+            </div>
+        </div>
+        <form-input label="Email" model="email"></form-input>
+        <form-input label="Hiện" model="active" type="checkbox"></form-input>
+        <form-input label="Admin" model="admin" type="checkbox"></form-input>
+    </div>
+</form>

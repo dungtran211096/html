@@ -1,0 +1,61 @@
+<div ui-view>
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-folder-open"></span>
+            {{title}}
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button ui-sref="_REPLACE_m.create"><span class="fa fa-plus-circle"></span> Thêm Mới</button>
+            </li>
+            <li>
+                <button class="cancel" type="button"><span class="fa fa-times-circle"></span> Hủy</button>
+            </li>
+        </ul>
+    </div>
+
+    <table class="list-item table-responsive table-striped table-hover">
+        <tr>
+            <th ng-click="checkAll()"><input type="checkbox" ng-model="isCheckAll"></th>
+            <th>STT</th>
+            <th>Cập Nhật</th>
+            <th class="text-center" style="width: 200px;">Xử Lý</th>
+        </tr>
+        <tr ng-repeat="record in records">
+            <td><input type="checkbox" ng-model="check[$index]"></td>
+            <td class="text-center">{{record.id}}</td>
+            <td>{{record.updated_at}}</td>
+            <td class="text-center">
+                <a ui-sref="_REPLACE_m.update({id:record.id})"><span class="fa fa-wrench"></span></a>
+                <a ng-click="delete($index)"><span class="fa fa-close"></span></a>
+                <a ng-click="active($index)" ng-class="{'active':record.active == 1}"><span
+                        class="fa fa-check-circle"></span></a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="paginate">
+        <ul class="left">
+            <li ng-click="checkAll()"><input type="checkbox" ng-model="isCheckAll"></li>
+            <li>
+                <button ng-click="deleteMany()" class="d-btn d-danger"><span class="fa fa-close"></span>
+                    Xóa
+                </button>
+            </li>
+            <li>
+                <button ng-click="activeMany(true)" class="d-btn d-success"><span class="fa fa-check-circle-o"></span>
+                    Hiện
+                </button>
+            </li>
+            <li>
+                <button ng-click="activeMany(false)" class="d-btn d-default"><span class="fa fa-check-circle-o"></span>
+                    Ẩn
+                </button>
+            </li>
+        </ul>
+
+        <ul class="pagination right" uib-pagination total-items="totalItems" ng-model="pagination.currentPage"
+            ng-change="getRecords()" previous-text="Trước" next-text="Sau"></ul>
+    </div>
+</div>

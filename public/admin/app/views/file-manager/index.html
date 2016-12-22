@@ -1,0 +1,33 @@
+<form>
+    <div class="section-title">
+        <h3>
+            <span class="fa fa-files-o"></span>
+            Quản Lý Files
+        </h3>
+
+        <ul id="action">
+            <li>
+                <button class="submit" type="submit"><span class="fa fa-save"></span> Lưu</button>
+            </li>
+            <li>
+                <button class="reset" ng-click="reset()" type="button"><span class="fa fa-repeat"></span> Reset</button>
+            </li>
+            <li>
+                <button class="cancel" ui-sref="articles.cat.list" type="button"><span
+                        class="fa fa-times-circle"></span>
+                    Hủy
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="form-content" style="padding: 0;">
+        <style>
+            iframe {
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+        <iframe src="./app/views/file-manager/filemanager.html" frameborder="0"></iframe>
+    </div>
+</form>

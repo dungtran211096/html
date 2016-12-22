@@ -1,0 +1,29 @@
+{
+  "name": "bower",
+  "authors": [
+    "tranleducduy <tranleducduy.nd@gmail.com>"
+  ],
+  "description": "Something u need to make it works",
+  "main": "bower.json",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1",
+    "angular": "^1.5.8",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "angular-animate": "^1.5.8",
+    "angular-loading-bar": "^0.9.0",
+    "ngToast": "ngtoast#^2.0.0",
+    "angular-bootstrap": "^2.0.1",
+    "angular-nestable": "ng-nestable#^0.0.1",
+    "ngstorage": "^0.3.11"
+  }
+}

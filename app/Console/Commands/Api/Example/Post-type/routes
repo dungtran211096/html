@@ -1,0 +1,49 @@
+// _REPLACE_mc Route
+.state('_REPLACE_m', {
+    abstract: true,
+    template: '<div ui-view></div>',
+    url: '/_REPLACE_o',
+    controller: '_REPLACE_mcCtr'
+})
+    /*
+     Categories Route
+     */
+    .state('_REPLACE_m.cat', {
+        templateUrl: 'app/views/_REPLACE_o-categories/index.html',
+        url: '/danh-muc',
+        controller: '_REPLACE_ocCategoriesCtr'
+    })
+    .state('_REPLACE_m.cat.list', {
+        templateUrl: 'app/views/_REPLACE_o-categories/index.html',
+        url: '/',
+        controller: 'List_REPLACE_ocCategoriesCtr'
+    })
+    .state('_REPLACE_m.cat.create', {
+        templateUrl: 'app/views/_REPLACE_o-categories/create.html',
+        url: '/tao-moi',
+        controller: 'Add_REPLACE_ocCategoryCtr'
+    })
+    .state('_REPLACE_m.cat.edit', {
+        templateUrl: 'app/views/_REPLACE_o-categories/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'Edit_REPLACE_ocCategoryCtr'
+    })
+    /*
+     _REPLACE_mc Route
+     */
+    .state('_REPLACE_m.list', {
+        templateUrl: 'app/views/_REPLACE_m/index.html',
+        url: '',
+        controller: 'List_REPLACE_mcCtr'
+    })
+    .state('_REPLACE_m.create', {
+        templateUrl: 'app/views/_REPLACE_m/create.html',
+        url: '/tao-moi',
+        controller: 'Add_REPLACE_ocCtr'
+    })
+    .state('_REPLACE_m.edit', {
+        templateUrl: 'app/views/_REPLACE_m/create.html',
+        url: '/:id/chinh-sua',
+        controller: 'Edit_REPLACE_ocCtr'
+    })
+    //Add_Here

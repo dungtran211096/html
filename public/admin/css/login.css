@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Tahoma;
+  src: url("../fonts/tahoma/tahoma.ttf");
+}
+
+body {
+  background: url(../images/login-bg.png) center center;
+}
+
+.d-input {
+  margin: auto;
+  height: 25px;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+}
+
+.d-input:focus {
+  outline: 0;
+}
+
+.d-btn {
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 14px;
+  margin-top: 15px;
+}
+
+.d-btn:focus {
+  outline: 0;
+}
+
+.d-success {
+  background-color: #038400;
+}
+
+#login {
+  font-family: Tahoma;
+  padding: 43px 0;
+  background-color: #000;
+}
+
+#login img {
+  display: block;
+  margin: auto;
+  height: 32px;
+}
+
+#login img#logo {
+  margin-bottom: 30px;
+  height: 80px;
+}
+
+#login form .row {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 33px;
+  border-top: 1px solid #400405;
+  border-bottom: 1px solid #400405;
+  background-color: #0e0e0e;
+  padding: 30px 18px 0 15px;
+}
+
+#login form .row .fa {
+  text-align: center;
+  font-size: 45px;
+  color: #0097d0;
+  background-color: #000;
+  margin: auto;
+  padding: 16px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+#login form button {
+  text-align: right;
+  margin-right: 33px;
+}
+
+#login form label {
+  font-size: 15px;
+  color: #cfcfcf;
+  margin: auto;
+  margin-left: 0;
+  width: 30%;
+}
+
+#login form input {
+  margin-right: 0;
+  width: calc(70% - 15px);
+  border-radius: 5px;
+}
+
+#login form .input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#login .forgot-pass {
+  float: left;
+  margin: 15px 30px;
+  font-size: 13px;
+  color: #cfcfcf;
+}
+
+#login .forgot-pass .fa {
+  font-size: 16px;
+  color: #f89c28;
+}
+
+#login .forgot-pass > a {
+  display: block;
+  color: #cfcfcf;
+  text-align: left;
+  text-decoration: underline;
+}
