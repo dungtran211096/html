@@ -1,25 +1,45 @@
-.container h2{
+.container h2 {
     text-align: center;
 }
-.container img{
+
+.container img {
     margin: auto;
 }
-#menu p{
-    margin-top:30px;
+
+#menu p {
+    margin-top: 30px;
     text-align: center;
     display: inline-block;
 }
-.main .container #soluong{
+
+.main .container #soluong {
     background-color: #f5f5f5;
     width: 100%;
 }
-#soluong{
-    margin-top:30px;
-    text-align: center  ;
+
+#soluong {
+    margin-top: 30px;
+    text-align: center;
 }
-.fa{
+
+#gioi-thieu h3 {
+    margin-top: 5px;
+}
+
+#gioi-thieu .stat {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#gioi-thieu .stat .fa {
+    font-size: 16px;
     color: #55a747;
 }
-h3{
-    margin-top:5px;
+
+#gioi-thieu .stat p {
+    font-weight: normal;
+}
+
+#gioi-thieu .stats {
+    background-color: #f5f5f5;
 }
