@@ -3,6 +3,7 @@
 }
 .container img{
     margin: auto;
+    width: 100%;
 }
 #lists {
     margin-top:30px;
@@ -16,7 +17,7 @@
     margin-top:30px;
     text-align: center  ;
 }
-.fa{
+.container .fa{
     color: #55a747;
 }
 #gioi_thieu .stat{
