@@ -59,17 +59,17 @@
         </li>
         <li class="has-child" ng-class="{expanded:$state.includes('articles')}">
             <a ng-click="expand($event)" ng-class="{active:$state.includes('articles')}">
-                <span class="fa fa-newspaper-o"></span> Bài Viết
+                <span class="fa fa-newspaper-o"></span> Tin Tức
             </a>
             <ul>
                 <li ui-sref-active="active" ui-sref="articles.cat.list">
                     <a>
-                        <span class="fa fa-folder-open-o"></span> Danh Mục Bài Viết
+                        <span class="fa fa-folder-open-o"></span> Danh Mục Tin Tức
                     </a>
                 </li>
                 <li ui-sref-active="active" ui-sref="articles.list">
                     <a>
-                        <span class="fa fa-list-ol"></span> Danh Sách Bài Viết
+                        <span class="fa fa-list-ol"></span> Danh Sách Tin Tức
                     </a>
                 </li>
             </ul>
