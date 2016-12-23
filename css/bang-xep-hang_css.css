@@ -1,0 +1,78 @@
+.container .row a{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.left{
+    margin-top: 15px;
+    width: 100%;
+    border: 1px solid #333333;
+}
+.table-responsive .table #icons{
+    float: right;
+}
+.table-responsive .table i{
+    margin-right:10px;
+}
+.right-box select{
+    height: 34px;
+    float: left;
+    margin-left:340px;
+}
+.right-box .input-search{
+    width: 200px;
+    float: left;
+}
+.right-box form{
+    float: right;
+}
+.right-box .form-control{
+    height: 34px;
+    float: right;
+    width: 200px;
+    margin-right:0px;
+}
+.right-box  .btn-default{
+    height:34px;
+    float: left;
+    margin-left: 0px;
+}
+.right-box form{
+    float: right;
+    margin-bottom: 30px;
+}
+.container .row a{
+    margin-top:0px;
+}
+.container .row a:hover{
+    color: #1c9998;
+}
+.right-box form a{
+    margin-left:10px;
+    color: #0c5395;
+    text-decoration: underline ;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.information{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333333;
+}
+
+.information .image{
+    padding-left:30px;
+    margin-top: 0px;
+}
+.information .title{
+    margin-top: 0px;
+}
+.right{
+    border:1px solid #333333;
+}
+.chuyentrang{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
