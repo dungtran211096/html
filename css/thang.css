@@ -132,8 +132,9 @@ footer .cong-ty-lien-ket ul li {
 }
 
 footer .lien-he {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #c9e6f1;
 }
 
 footer .lien-he .logo-truong {
@@ -363,6 +364,54 @@ section.thong-tin .thong-tin-co-ban .anh-dai-dien img {
 section.thong-tin .thong-tin-co-ban .ten-va-truong p {
   font-size: 17px;
   font-weight: bold;
+}
+
+section.trang-chu .tin-moi h3, section.trang-chu .guong-mat-tieu-bieu h3 {
+  border-bottom: 1px solid rgba(152, 189, 46, 0.19);
+}
+
+section.trang-chu .tin-moi h3 a, section.trang-chu .guong-mat-tieu-bieu h3 a {
+  padding: 15px;
+  color: #333333;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+section.trang-chu .tin-moi ul, section.trang-chu .guong-mat-tieu-bieu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section.trang-chu .tin-moi ul li .thumbnail, section.trang-chu .guong-mat-tieu-bieu ul li .thumbnail {
+  border: 0;
+}
+
+section.trang-chu .guong-mat-tieu-bieu ul li {
+  position: relative;
+  margin-top: 20px;
+}
+
+section.trang-chu .guong-mat-tieu-bieu ul li a {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.trang-chu .guong-mat-tieu-bieu ul li a img {
+  width: 100%;
+}
+
+section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them {
+  background-color: rgba(191, 195, 194, 0.5);
+  position: absolute;
+  bottom: 5px;
+  width: calc(100% - 30px);
+}
+
+section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them p {
+  width: 100%;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .bx-wrapper .bx-viewport {

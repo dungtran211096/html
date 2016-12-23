@@ -95,8 +95,9 @@ footer
         display: inline-block
         margin: 10px 20px
   .lien-he
-    margin-top: 20px
-    margin-bottom: 20px
+    padding-top: 20px
+    padding-bottom: 20px
+    background-color: #c9e6f1
     .logo-truong
       padding-right: 30px
       border-right: 1px solid #d6d6d6
@@ -255,6 +256,42 @@ section.thong-tin
       p
         font-size: 17px
         font-weight: bold
+
+section.trang-chu
+  .tin-moi,.guong-mat-tieu-bieu
+    h3
+      border-bottom: 1px solid rgba(152, 189, 46, 0.19)
+      a
+        padding: 15px
+        color: #333333
+        font-size: 40px
+        text-transform: uppercase
+    ul
+      list-style-type: none
+      padding: 0
+      li
+        .thumbnail
+          border: 0
+  .guong-mat-tieu-bieu
+    ul
+      li
+        position: relative
+        margin-top: 20px
+        a
+          text-transform: uppercase
+          text-align: center
+          img
+            width: 100%
+          .thong-tin-them
+            background-color: rgba(191, 195, 194, 0.5)
+            position: absolute
+            bottom: 5px
+            width: calc(100% - 30px)
+            p
+              width: 100%
+              color: #333333
+              font-weight: bold
+              margin-top: 10px
 
 .bx-wrapper
   .bx-viewport
