@@ -348,6 +348,8 @@ section.main .chuyen-trang .trang-sau:after {
 
 section.thong-tin .thong-tin-ca-nhan {
   font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 section.thong-tin .thong-tin-co-ban {
