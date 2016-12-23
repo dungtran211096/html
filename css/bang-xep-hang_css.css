@@ -1,3 +1,9 @@
+main a{
+    color: #0c5395;
+}
+a:hover{
+    color: #1c9998;
+}
 .container .row a{
     margin-top: 30px;
     margin-bottom: 15px;
@@ -39,17 +45,14 @@
 }
 .right-box form{
     float: right;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .container .row a{
     margin-top:0px;
 }
-.container .row a:hover{
-    color: #1c9998;
-}
+
 .right-box form a{
     margin-left:10px;
-    color: #0c5395;
     text-decoration: underline ;
     display: inline-block;
     background-color: transparent;
