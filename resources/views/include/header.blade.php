@@ -15,16 +15,9 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{route('category', 'uet')}}">Đại học công nghệ</a></li>
-                        <li><a href="{{route('category','ulis')}}">Đại học ngoại ngữ</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Đại học XHNV</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Đại học KHTN</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Đại học Việt Nhật</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Đại học Giáo dục</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Đại học kinh tế</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Khoa Y dược</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Khoa luật</a></li>
-                        <li><a href="{{route('category','chitiet')}}">Khoa quốc tế</a></li>
+                        @foreach($schools as $i)
+                            <li><a href="{{route('category', $i->slug)}}">{{$i-> name}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <li><a href="#">Gương mặt tiêu biểu</a></li>
