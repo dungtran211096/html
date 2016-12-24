@@ -29,7 +29,7 @@ class SiteController extends Controller
     public function category($slug)
     {
         $cat = ArticleCategory::findBySlugOrFail($slug);
-        $articles = $cat->articles()->active()->get();
+        $articles = $cat->articles()->active()->paginate(getOption('max_article_1_page', 10));
         return view('include.detail', compact([
             'articles', 'cat'
         ]));

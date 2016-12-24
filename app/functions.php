@@ -9,7 +9,7 @@ function getOption($name, $default = '')
         return $default;
     } else {
         $a = @unserialize($option->value);
-        if ($a || $a == []) {
+        if ($a || is_array($a)) {
             return $a;
         }
         return $option->value;

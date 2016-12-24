@@ -30,17 +30,15 @@
                                             <li><a href="{{route('category', [$cat->slug])}}">{{$cat->name}}</a></li>
                                         @endforeach
                                     </ul>
-                                    <a href="#" class="btn btn-wide btn-info xem-them">Xem thêm</a>
+                                    <a href="{{route('article',[$i->slug])}}" class="btn btn-wide btn-info xem-them">Xem
+                                        thêm</a>
                                 </div>
                             </li>
                         @endforeach
 
 
                     </ul>
-                    <div class="chuyen-trang row">
-                        <a href="#" class="btn btn-default btn-wide trang-truoc">Trang trước</a>
-                        <a href="#" class="btn btn-default btn-wide trang-sau">Trang sau</a>
-                    </div>
+                    @include('template.paginate',['rs' => $articles])
                 </div>
                 <div class="col-md-3">
                     <ul class="ben-phai">

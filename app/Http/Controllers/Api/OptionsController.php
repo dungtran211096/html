@@ -67,9 +67,9 @@ class OptionsController extends ApiController
     private function getValue($option)
     {
         $a = @unserialize($option['value']);
-        if ($a || $a == []) {
+        if ($a || is_array($a)) {
             return $a;
         }
-        return $option['value'];
+        return $option['value'] ? $option['value'] : '';
     }
 }

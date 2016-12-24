@@ -15,18 +15,22 @@ Route::get('/', [
     'as' => 'home',
     'uses' => 'SiteController@index'
 ]);
-Route::get('/dang-nhap',[
-   'as' => 'login',
+Route::get('/dang-nhap', [
+    'as' => 'login',
     'uses' => 'SiteController@login'
 ]);
 
-Route::get('/dang-ky',[
+Route::get('/dang-ky', [
     'as' => 'register',
     'uses' => 'SiteController@register'
 ]);
 Route::get('/danh-muc/{slug}', [
     'as' => 'category',
     'uses' => 'SiteController@category'
+]);
+Route::get('tin-tuc/{slug}', [
+    'as' => 'article',
+    'uses' => 'SiteController@article'
 ]);
 Route::get('/tim-kiem', [
     'as' => 'search',

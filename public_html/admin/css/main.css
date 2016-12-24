@@ -12,6 +12,10 @@ body {
     cursor: pointer;
 }
 
+label {
+    text-align: right;
+}
+
 ul {
     list-style-type: none;
 }
