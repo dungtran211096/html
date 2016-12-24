@@ -21,7 +21,7 @@
     </div>
 
     <div class="form-content">
-        <form-input label="Tên đăng nhập" model="username"></form-input>
+        <form-input label="Họ Và Tên" model="name"></form-input>
         <div class="form-input featured-image">
             <div class="col-md-2">
                 <label for="avatar">Ảnh Đại Diện</label>
@@ -37,6 +37,7 @@
         </div>
         <form-input label="Email" model="email"></form-input>
         <form-input label="Hiện" model="active" type="checkbox"></form-input>
+        <form-input label="Đã Đạt" model="is_5toter" type="checkbox"></form-input>
         <form-input label="Admin" model="admin" type="checkbox"></form-input>
 
         <div ng-repeat="(typeKey,typeName) in type">

@@ -12,7 +12,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'username', 'active', 'avatar', 'msv', 'birthday', 'uni', 'school_year', 'faculty', 'dd_renluyen', 'ht_gpa'
+        'name', 'email', 'password', 'username', 'active', 'avatar', 'msv',
+        'birthday', 'uni', 'school_year', 'faculty', 'dd_renluyen', 'ht_gpa',
+        'is_5toter'
     ];
 
     /**
@@ -38,10 +40,13 @@ class User extends Authenticatable
             'tinhnguyen' => null,
             'hoinhap' => null
         ];
-        $a = $this->data->toArray();
-        foreach ($array as $key => $value) {
-            if (@unserialize($a[$key])) {
-                $array[$key] = unserialize($a[$key]);
+
+        if ($b = $this->data) {
+            $a = $b->toArray();
+            foreach ($array as $key => $value) {
+                if (@unserialize($a[$key])) {
+                    $array[$key] = unserialize($a[$key]);
+                }
             }
         }
         return $array;

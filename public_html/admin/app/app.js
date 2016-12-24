@@ -34,6 +34,10 @@ vinasem.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
             templateUrl: 'app/views/config/index.html',
             url: '/cau-hinh-chung'
         })
+        .state('config.banner', {
+            templateUrl: 'app/views/config/banner.html',
+            url: '/banner'
+        })
         /*
          Users Route
          */

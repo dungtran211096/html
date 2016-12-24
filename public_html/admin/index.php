@@ -45,6 +45,11 @@
                         <span class="fa fa-user"></span> Thông Tin Sinh Viên
                     </a>
                 </li>
+                <li ui-sref-active="active" ui-sref="config.banner">
+                    <a>
+                        <span class="fa fa-file-image-o"></span> Banners
+                    </a>
+                </li>
             </ul>
         </li>
         <li>

@@ -8,7 +8,8 @@ class UserTransformer extends Transformer
     {
         return array_merge($this->allFillable($user), [
             'admin' => (bool)$user->admin,
-            'data' => $user->data1
+            'data' => $user->data1,
+            'is_5toter' => (bool)$user->is_5toter
         ]);
     }
 }
