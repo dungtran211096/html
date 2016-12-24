@@ -33,7 +33,7 @@ class UserQuestionSeeder extends Seeder
             foreach ($a as $item) {
                 $questions = getOption($item);
                 foreach ($questions as $key => $value) {
-                    $answers[$item][$key] = $faker->sentence(10, 1);
+                    $answers[$item][$key] = $faker->sentence(10);
                 }
                 $answers[$item] = serialize($answers[$item]);
             }
