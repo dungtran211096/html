@@ -64,5 +64,24 @@ vinasem.controller('ConfigCtr', function ($rootScope, $scope, Api) {
                 $scope.data.banner[key] = fileUrl;
             });
         });
+    };
+
+    $scope.addPartner = function (url) {
+        if (typeof $scope.data.partner === 'undefined' || !$scope.data.partner) {
+            $scope.data.partner = [];
+        }
+        if ($scope.data.partner.indexOf(url) == -1) {
+            $scope.data.partner.push(url);
+        }
+    };
+    $scope.removePartner = function (key) {
+        $scope.data.partner.splice(key, 1);
+    };
+    $scope.editPartner = function (key) {
+        $scope.finder('Images', 'new' + key + 'partner', function (fileUrl) {
+            $rootScope.$apply(function () {
+                $scope.data.partner[key] = fileUrl;
+            });
+        });
     }
 });

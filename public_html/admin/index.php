@@ -50,6 +50,11 @@
                         <span class="fa fa-file-image-o"></span> Banners
                     </a>
                 </li>
+                <li ui-sref-active="active" ui-sref="config.partner">
+                    <a>
+                        <span class="fa fa-file-image-o"></span> Đối Tác
+                    </a>
+                </li>
             </ul>
         </li>
         <li>

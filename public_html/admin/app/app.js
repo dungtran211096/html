@@ -38,6 +38,10 @@ vinasem.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
             templateUrl: 'app/views/config/banner.html',
             url: '/banner'
         })
+        .state('config.partner', {
+            templateUrl: 'app/views/config/partner.html',
+            url: '/doi-tac'
+        })
         /*
          Users Route
          */
