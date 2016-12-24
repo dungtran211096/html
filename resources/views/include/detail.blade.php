@@ -1,0 +1,132 @@
+@extends('master')
+@section('content')
+<section class="main">
+    <div class="container">
+        <h1 class="tieu-de">
+            <a class="noidung">
+                Tin tức trường Đại học công nghệ
+            </a>
+        </h1>
+        <div class="row">
+            <div class="col-md-9">
+                <ul class="danh-sach">
+                    <li class="bai-dang">
+                        <h3 class="tieu-de-bai-dang">
+                            <a href="#">Ngày hội việc làm năm 2016</a>
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-4 anh-dai-dien">
+                                <a href="#"><img src="./img/minion.jpg" alt="tieude"></a>
+                            </div>
+                            <div class="col-md-8 noi-dung-bai-dang">
+                                1. Năm 2013 Trường đại học Công nghệ tiếp tục tuyển sinh bằng phương thức đánh giá năng lực (DGNL)
+                                được đại học quốc gia Hà nội tổ chức 2 đợt ( vào riêng tháng 5 và tháng 8). 2. Chi tiêu các chương
+                                trình chuẩn  của khoa CNTT : khoa học máy tính 30 Công nghệ thông tin :20, agudjggdakjngkegnjngjrfng
+                                gdkjgnskrfngsrngjkn gadsgirg skgnwengn sdgjknwognr adgjnbgnwnog adgkndgeoghowgo qogdalmvagoe gadjgsfs
+                                asdgjheogjavboa aeogho
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ngay-dang">22/12/2016</div>
+                            <ul class="tag">
+                                <li><a href="#">Hop tac</a></li>
+                                <li><a href="#">Sinh vien</a></li>
+                                <li><a href="#">Thông tin việc làn</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-wide btn-info xem-them">Xem thêm</a>
+                        </div>
+                    </li>
+                    <li class="bai-dang">
+                        <h3 class="tieu-de-bai-dang">
+                            <a href="#">Ngày hội việc làm năm 2016</a>
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-4 anh-dai-dien">
+                                <a href="#"><img src="./img/minion.jpg" alt="tieude"></a>
+                            </div>
+                            <div class="col-md-8 noi-dung-bai-dang">
+                                1. Năm 2013 Trường đại học Công nghệ tiếp tục tuyển sinh bằng phương thức đánh giá năng lực (DGNL)
+                                được đại học quốc gia Hà nội tổ chức 2 đợt ( vào riêng tháng 5 và tháng 8). 2. Chi tiêu các chương
+                                trình chuẩn  của khoa CNTT : khoa học máy tính 30 Công nghệ thông tin :20, agudjggdakjngkegnjngjrfng
+                                gdkjgnskrfngsrngjkn gadsgirg skgnwengn sdgjknwognr adgjnbgnwnog adgkndgeoghowgo qogdalmvagoe gadjgsfs
+                                asdgjheogjavboa aeogho
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ngay-dang">22/12/2016</div>
+                            <ul class="tag">
+                                <li><a href="#">Hop tac</a></li>
+                                <li><a href="#">Sinh vien</a></li>
+                                <li><a href="#">Thông tin việc làn</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-wide btn-info xem-them">Xem thêm</a>
+                        </div>
+                    </li>
+                    <li class="bai-dang">
+                        <h3 class="tieu-de-bai-dang">
+                            <a href="#">Ngày hội việc làm năm 2016</a>
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-4 anh-dai-dien">
+                                <a href="#"><img src="./img/minion.jpg" alt="tieude"></a>
+                            </div>
+                            <div class="col-md-8 noi-dung-bai-dang">
+                                1. Năm 2013 Trường đại học Công nghệ tiếp tục tuyển sinh bằng phương thức đánh giá năng lực (DGNL)
+                                được đại học quốc gia Hà nội tổ chức 2 đợt ( vào riêng tháng 5 và tháng 8). 2. Chi tiêu các chương
+                                trình chuẩn  của khoa CNTT : khoa học máy tính 30 Công nghệ thông tin :20, agudjggdakjngkegnjngjrfng
+                                gdkjgnskrfngsrngjkn gadsgirg skgnwengn sdgjknwognr adgjnbgnwnog adgkndgeoghowgo qogdalmvagoe gadjgsfs
+                                asdgjheogjavboa aeogho
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ngay-dang">22/12/2016</div>
+                            <ul class="tag">
+                                <li><a href="#">Hop tac</a></li>
+                                <li><a href="#">Sinh vien</a></li>
+                                <li><a href="#">Thông tin việc làn</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-wide btn-info xem-them">Xem thêm</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="chuyen-trang row">
+                    <a href="#" class="btn btn-default btn-wide trang-truoc">Trang trước</a>
+                    <a href="#" class="btn btn-default btn-wide trang-sau">Trang sau</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <ul class="ben-phai">
+                    <li>
+                        <img src="./img/namtot.png" alt="namtot">
+                        <a href="#" class="btn btn-wide btn-info">Gửi hồ sơ đăng kí</a>
+                    </li>
+                    <li>
+                        <h3 class="tieu-de-phai">Sự kiện</h3>
+                        <ul class="su-kien">
+                            <li>
+                                <a href="#">Ký Thỏa thuận với công ty Quang Thang aegh aegioj aedglhr aegilh aedpgi</a>
+                            </li>
+                            <li>
+                                <a href="#">Ký Thỏa thuận với công ty Quang Thang</a>
+                            </li>
+                            <li>
+                                <a href="#">Ký Thỏa thuận với công ty Quang Thang</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="tieu-de-phai">Video clips</h3>
+                        <iframe src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+                    </li>
+                    <li>
+                        <h3 class="tieu-de-phai">Đối tác</h3>
+                        <img src="./img/LogoFPT2.jpg" alt="fpt">
+                        <img src="./img/LogoFPT2.jpg" alt="fpt">
+                        <img src="./img/LogoFPT2.jpg" alt="fpt">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    @endsection
