@@ -1,5 +1,3 @@
-
-
 <footer>
     <div class="container">
         <div class="huong-dan-gui-ho-so">
@@ -16,11 +14,9 @@
     <div class="cong-ty-lien-ket">
         <div class="container">
             <ul>
-                <li><a href="#" rel="nofollow"><img src="{{asset('./htmlcss/img/logo.png')}}" alt="logo"></a></li>
-                <li><a href="#" rel="nofollow"><img src="{{asset('./htmlcss/img/logo.png')}}" alt="logo"></a></li>
-                <li><a href="#" rel="nofollow"><img src="{{asset('./htmlcss/img/logo.png')}}" alt="logo"></a></li>
-                <li><a href="#" rel="nofollow"><img src="{{asset('./htmlcss/img/logo.png')}}" alt="logo"></a></li>
-                <li><a href="#" rel="nofollow"><img src="{{asset('./htmlcss/img/logo.png')}}" alt="logo"></a></li>
+                @foreach(getOption('partner') as $partner)
+                    <li><a href="#" rel="nofollow"><img src="{{asset($partner)}}"></a></li>
+                @endforeach
             </ul>
         </div>
     </div>

@@ -8,8 +8,9 @@ function getOption($name, $default = '')
         ]);
         return $default;
     } else {
-        if (@unserialize($option->value)) {
-            return unserialize($option->value);
+        $a = @unserialize($option->value);
+        if ($a || $a == []) {
+            return $a;
         }
         return $option->value;
     }

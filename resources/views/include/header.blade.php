@@ -1,5 +1,4 @@
 <header>
-
     <nav class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
@@ -37,10 +36,9 @@
     </nav>
     <div class="banner">
         <ul id="slide">
-            <li><a href="#"><img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="slide"></a></li>
-            <li><a href="#"><img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="slide"></a></li>
-            <li><a href="#"><img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="slide"></a></li>
-            <li><a href="#"><img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="slide"></a></li>
+            @foreach(getOption('banner') as $banner)
+                <li><a href="#"><img src="{{asset($banner)}}" alt="slide"></a></li>
+            @endforeach
         </ul>
         <div class="gui-ho-so">
             <button type="button" class="btn btn-wide btn-info">Gửi hồ sơ đăng kí</button>

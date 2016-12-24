@@ -4,7 +4,6 @@
 $(document).ready(function () {
     $("#slide").bxSlider({
         auto:true,
-        pager: false,
-        controls: false
+        pager: false
     });
 });

@@ -9,7 +9,7 @@
     <link href="{{asset('htmlcss/css/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-    <link href="{{asset('htmlcss/css/vendor/bootstrap/css/flat-ui.min.css')}}" rel="stylesheet">
+    <link href="{{asset('htmlcss/css/flat-ui.min.css')}}" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{asset('htmlcss/img/favicon.ico')}}">
 
@@ -23,6 +23,8 @@
 </head>
 <body>
 @include('include.header')
+@section('content')
+@show
 @yield('register')
 @include('include.footer')
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
