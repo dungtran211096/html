@@ -420,3 +420,10 @@ section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them p {
   box-shadow: none;
   background-color: transparent;
 }
+
+section.dang-nhap form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

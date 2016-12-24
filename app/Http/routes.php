@@ -15,7 +15,15 @@ Route::get('/', [
     'as' => 'home',
     'uses' => 'SiteController@index'
 ]);
+Route::get('/dang-nhap',[
+   'as' => 'login',
+    'uses' => 'SiteController@login'
+]);
 
+Route::get('/dang-ky',[
+    'as' => 'register',
+    'uses' => 'SiteController@register'
+]);
 Route::get('/danh-muc/{slug}', [
     'as' => 'category',
     'uses' => 'SiteController@category'
