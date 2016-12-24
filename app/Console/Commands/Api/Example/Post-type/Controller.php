@@ -66,7 +66,7 @@ class _REPLACE_mcController extends ApiController
     public function update($id, _REPLACE_ocRequest $request)
     {
         _REPLACE_oc::findOrFail($id)->update($request->all());
-        _REPLACE_ocCategory::where('_REPLACE_o_id', $id)->delete();
+        _REPLACE_ocCategoryRelation::where('_REPLACE_o_id', $id)->delete();
         $this->addCategories($id, $request->get('categories', []));
         return $this->responseNoContent();
     }

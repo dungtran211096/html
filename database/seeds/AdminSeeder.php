@@ -11,6 +11,7 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->truncate();
         \App\User::create([
             'admin' => 1,
             'active' => 1,

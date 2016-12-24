@@ -66,7 +66,7 @@ class ArticlesController extends ApiController
     public function update($id, ArticleRequest $request)
     {
         Article::findOrFail($id)->update($request->all());
-        ArticleCategory::where('article_id', $id)->delete();
+        ArticleCategoryRelation::where('article_id', $id)->delete();
         $this->addCategories($id, $request->get('categories', []));
         return $this->responseNoContent();
     }

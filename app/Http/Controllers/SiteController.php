@@ -21,21 +21,27 @@ class SiteController extends Controller
         ]);
     }
 
-    public function index(){
+    public function index()
+    {
         return view('master');
     }
-    public function category($slug){
 
-        $articles = ArticleCategory::findBySlug($slug)->articles()->get();
-       // dd($articles);
-        return view('include.detail', compact('articles'));
+    public function category($slug)
+    {
+        $cat = ArticleCategory::findBySlugOrFail($slug);
+        $articles = $cat->articles()->active()->get();
+        return view('include.detail', compact([
+            'articles', 'cat'
+        ]));
     }
 
-    public function login(){
+    public function login()
+    {
         return view('include.authentication.login');
     }
 
-    public function register(){
+    public function register()
+    {
         return view('include.authentication.register');
     }
 }
