@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\View;
 
-class SiteCOntroller extends Controller
+class SiteController extends Controller
 {
     function __construct()
     {
@@ -24,9 +24,18 @@ class SiteCOntroller extends Controller
     public function index(){
         return view('master');
     }
-    public function category(){
-        $articles = Article::all();
+    public function category($slug){
+
+        $articles = ArticleCategory::findBySlug($slug)->articles()->get();
+       // dd($articles);
         return view('include.detail', compact('articles'));
     }
 
+    public function login(){
+        return view('include.authentication.login');
+    }
+
+    public function register(){
+        return view('include.authentication.register');
+    }
 }

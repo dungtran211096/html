@@ -23,7 +23,7 @@
 </head>
 <body>
 @include('include.header')
-@yield('content')
+@yield('register')
 @include('include.footer')
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
 <script src="{{asset('htmlcss/js/vendor/jquery.min.js')}}"></script>

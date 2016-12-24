@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="ngay-dang">{{$i->create_at}}</div>
+                            <div class="ngay-dang">{{$i->created_at}}</div>
                             <ul class="tag">
                                 <li><a href="#">Hop tac</a></li>
                                 <li><a href="#">Sinh vien</a></li>
