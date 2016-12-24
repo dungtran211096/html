@@ -22,6 +22,59 @@
     </div>
 
     <div class="form-content">
-        
+        <div class="form-input featured-image">
+            <div class="col-md-4">
+                <div class="image pointer" ng-click="finder('Images', 'newBanner')">
+                    <img ng-src="{{data.newBanner}}">
+                </div>
+
+                <button class="d-btn d-success" type="button" ng-click="addBanner(data.newBanner)">Thêm</button>
+                <input class="d-input hidden" id="newBanner" type="text" ng-model="data.newBanner">
+            </div>
+        </div>
+        <style>
+            #banner-list {
+                padding-left: 0;
+            }
+
+            #banner-list .d-btn {
+                cursor: pointer;
+            }
+
+            #banner-list li {
+                margin-bottom: 15px;
+                position: relative;
+            }
+
+            #banner-list li img {
+                width: 100%;
+                height: 250px;
+            }
+
+            #banner-list .action {
+                display: none;
+            }
+
+            #banner-list li:hover .action {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+        <ul id="banner-list">
+            <li ng-repeat="(key,val) in data.banner">
+                <img ng-src="{{data.banner[key]}}">
+                <div class="action">
+                    <div class="d-btn d-danger" ng-click="removeBanner(key)">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="d-btn d-warning" ng-click="editBanner(key)">
+                        <i class="fa fa-pencil"></i>
+                    </div>
+                </div>
+                <input type="hidden" ng-model="data.banner[key]" id="new{{key}}banner">
+            </li>
+        </ul>
     </div>
 </form>

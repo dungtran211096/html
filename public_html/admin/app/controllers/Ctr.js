@@ -27,17 +27,20 @@ vinasem.controller('Ctr', function ($rootScope, $scope, $window, $state, Api, $s
         localStorage.setItem('_menuToggle', $rootScope.asideClass);
     };
     $scope.editor = [];
-    $scope.finder = function (type, id) {
+    $scope.finder = function (type, id, callback) {
+        if (typeof callback === 'undefined') {
+            callback = function (fileUrl) {
+                $rootScope.$apply(function () {
+                    $rootScope.data[id] = fileUrl;
+                });
+            }
+        }
         var path = angular.element('#' + id).val();
         var a = '';
         if (typeof path !== 'undefined') {
             a = path.replace('/upload/' + type.toLowerCase() + '/', '');
         }
-        $scope.chooseFile(type + ':/' + a, function (fileUrl) {
-            $rootScope.$apply(function () {
-                $rootScope.data[id] = fileUrl;
-            });
-        });
+        $scope.chooseFile(type + ':/' + a, callback);
     };
     $scope.chooseFile = function ($path, callback) {
         CKFinder.config.language = 'vi';
