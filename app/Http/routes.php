@@ -24,6 +24,10 @@ Route::get('/dang-ky',[
     'as' => 'register',
     'uses' => 'SiteController@register'
 ]);
+Route::post('/dang-ky', [
+   'as' => 'register',
+    'uses' => 'SiteController@postRegister'
+]);
 Route::get('/danh-muc/{slug}', [
     'as' => 'category',
     'uses' => 'SiteController@category'

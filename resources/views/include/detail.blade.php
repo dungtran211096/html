@@ -17,7 +17,7 @@
                         </h3>
                         <div class="row">
                             <div class="col-md-4 anh-dai-dien">
-                                <a href="#"><img src="./img/minion.jpg" alt="tieude"></a>
+                                <a href="#"><img src="{{$i->image}}" alt="{{$i->image_name}}"></a>
                             </div>
                             <div class="col-md-8 noi-dung-bai-dang">
                                 {{$i ->description}}

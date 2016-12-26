@@ -414,16 +414,20 @@ section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them p {
   margin-top: 10px;
 }
 
-.bx-wrapper .bx-viewport {
-  left: 0;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-}
-
 section.dang-nhap form {
   width: 50%;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.fa-align-justify {
+  color: #ffffff;
+}
+
+.bx-wrapper .bx-viewport {
+  left: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
