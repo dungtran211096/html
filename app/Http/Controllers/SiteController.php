@@ -14,7 +14,6 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
-use Tymon\JWTAuth\Exceptions\JWTException;
 use JWTAuth;
 use Illuminate\Support\Facades\Validator;
 
@@ -40,35 +39,6 @@ class SiteController extends Controller
         return view('include.detail', compact('articles'));
     }
 
-    public function login()
-    {
-        return view('include.authentication.login');
-    }
-
-    public function postLogin(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        //verify $credentials and create token for users
-        $token = JWTAuth::attempt($credentials);
-        if($token){
-            return redirect()->route('home');
-            //  return response()->json(compact('token'))->withCookie(cookie('auth_token', $token));
-        }
-        else{
-            return $this->WrongEmailOrPassword();
-        }
-    }
-
-    protected function WrongEmailOrPassword(){
-        return response()->json([
-            'error' => [
-                'code' => 'BAD_REQUEST',
-                'http_code' => 400,
-                'message' => 'Sai email hoac mat khau'
-                ]
-        ], 400);
-    }
-
     public function register()
     {
         $var = false;
@@ -86,4 +56,24 @@ class SiteController extends Controller
         $var = true;
         return view('include.authentication.register',compact('var'));
     }
+
+
+    public function login()
+    {
+        return view('include.authentication.login');
+    }
+
+    public function postLogin(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        //verify $credentials and create token for users
+        $token = JWTAuth::attempt($credentials);
+        if($token){
+            return  Redirect::to('/');
+        }
+        else{
+            return Redirect::back()->with('message', 'Email or Password invalid!');
+        }
+    }
+
 }

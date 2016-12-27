@@ -17,7 +17,13 @@ function getOption($name, $default = '')
 
 function isLogin()
 {
-    return \Illuminate\Support\Facades\Auth::user();
+    if(\Illuminate\Support\Facades\Auth::user())
+    {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 function getDocuments($perPage = 24, $order = 'orderDate', $cat = null)

@@ -4,6 +4,11 @@
     <div class="container">
         <form action="{{route('login')}}" method="post">
             <h3>Đăng nhập</h3>
+            @if (session('message'))
+                <div class="alert alert-danger">
+                    {{ session('message') }}
+                </div>
+            @endif
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <div class="form-group">
