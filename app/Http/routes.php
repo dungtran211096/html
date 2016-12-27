@@ -32,18 +32,9 @@ Route::get('tin-tuc/{slug}', [
     'as' => 'article',
     'uses' => 'SiteController@article'
 ]);
-Route::get('/tim-kiem', [
-    'as' => 'search',
-    'uses' => 'SiteController@search'
-]);
-Route::post('/chia-se-tai-lieu', [
-    'as' => 'upload',
-    'uses' => 'SiteController@postUpload'
-]);
-
-Route::get('/{slug}', [
-    'as' => 'detail',
-    'uses' => 'SiteController@detail'
+Route::get('gioi-thieu', [
+    'as' => 'gioiThieu',
+    'uses' => 'SiteController@gioiThieu'
 ]);
 
 Route::post('api/v1/login', 'Api\AuthController@authenticate');

@@ -17,15 +17,15 @@
     <!--    BxSlider-->
     <link rel="stylesheet" href="{{asset('htmlcss/js/bxslider/jquery.bxslider.css')}}">
     <!--    End BxSlider-->
-    <link rel="stylesheet" href="{{asset('htmlcss/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('htmlcss/css/thang.css')}}">
+    <link rel="stylesheet" href="{{asset('htmlcss/css/main.css')}}">
 
 </head>
 <body>
 @include('include.header')
 @section('content')
 @show
-@yield('register')
 @include('include.footer')
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
 <script src="{{asset('htmlcss/js/vendor/jquery.min.js')}}"></script>

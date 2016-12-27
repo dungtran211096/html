@@ -8,7 +8,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav menu">
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="{{route('gioiThieu')}}">Giới thiệu</a></li>
                 <li class="dropdown">
                     <a href="chitiet.html" class="dropdown-toggle" data-toggle="dropdown">Tin tức
                         <b class="caret"></b>

@@ -35,6 +35,11 @@ class SiteController extends Controller
         ]));
     }
 
+    public function gioiThieu()
+    {
+        return view('gioithieu');
+    }
+
     public function login()
     {
         return view('include.authentication.login');
