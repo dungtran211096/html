@@ -36,7 +36,14 @@ Route::get('gioi-thieu', [
     'as' => 'gioiThieu',
     'uses' => 'SiteController@gioiThieu'
 ]);
-
+Route::get('cau-hoi-thuong-gap', [
+    'as' => 'question',
+    'uses' => 'SiteController@question'
+]);
+Route::post('cau-hoi-thuong-gap', [
+    'as' => 'question',
+    'uses' => 'SiteController@postQuestion'
+]);
 Route::post('api/v1/login', 'Api\AuthController@authenticate');
 Route::group([
     'prefix' => 'api/v1',

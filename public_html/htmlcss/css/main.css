@@ -1,37 +1,11 @@
-#gioi_thieu .container h2 {
-    text-align: center;
+.block {
+    display: block;
 }
 
-#gioi_thieu .container img {
-    margin: auto;
-    width: 100%;
+.right {
+    float: right;
 }
 
-#gioi_thieu #lists {
-    margin-top: 30px;
-}
-
-#gioi_thieu #lists p {
-    text-align: center;
-    display: inline-block;
-}
-
-#gioi_thieu #soluong {
-    margin-top: 30px;
-    text-align: center;
-}
-
-#gioi_thieu .container .fa {
-    color: #55a747;
-}
-
-#gioi_thieu .stat {
-    font-size: 32px;
-}
-
-#gioi_thieu {
-    padding-top: 15px;
-    border-bottom: 15px;
-    margin-top: 30px;
-    background-color: #f5f5f5;
+.top15 {
+    margin-top: 15px;
 }

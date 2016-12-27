@@ -27,7 +27,7 @@ class ArticleSeeder extends Seeder
             ]);
             for ($j = 1; $j < $numberArticle; $j++) {
                 $b = Article::create([
-                    'name' => $faker->title,
+                    'name' => $faker->sentence(10),
                     'active' => 1,
                     'image' => '/htmlcss/img/minion.jpg',
                     'content' => $faker->sentences(10, 1),

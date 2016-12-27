@@ -6,6 +6,7 @@ use App\Article;
 use App\ArticleCategory;
 use App\Http\Controllers\Api\ArticlesController;
 use App\Http\Controllers\Api\SchoolsController;
+use App\Question;
 use App\School;
 use Illuminate\Http\Request;
 
@@ -30,9 +31,15 @@ class SiteController extends Controller
     {
         $cat = ArticleCategory::findBySlugOrFail($slug);
         $articles = $cat->articles()->active()->paginate(getOption('max_article_1_page', 10));
-        return view('include.detail', compact([
+        return view('category', compact([
             'articles', 'cat'
         ]));
+    }
+
+    public function question()
+    {
+        $questions = Question::active()->paginate(getOption('max_article_1_page', 10));
+        return view('question', compact(['questions']));
     }
 
     public function gioiThieu()
