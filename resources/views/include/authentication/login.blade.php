@@ -4,6 +4,7 @@
     <div class="container">
         <form action="{{route('login')}}" method="post">
             <h3>Đăng nhập</h3>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <div class="form-group">
                     <label for="usr">Email : </label>

@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use JWTAuth;
@@ -50,7 +51,8 @@ class SiteController extends Controller
         //verify $credentials and create token for users
         $token = JWTAuth::attempt($credentials);
         if($token){
-            return response()->json(compact('token'));
+            return redirect()->route('home');
+            //  return response()->json(compact('token'))->withCookie(cookie('auth_token', $token));
         }
         else{
             return $this->WrongEmailOrPassword();
