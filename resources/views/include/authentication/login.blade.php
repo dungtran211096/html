@@ -6,8 +6,8 @@
             <h3>Đăng nhập</h3>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="usr">Email : </label>
-                    <input type="text" name="name" class="form-control" id="usr">
+                    <label for="usr">Username : </label>
+                    <input type="text" name="username" class="form-control" id="username">
                 </div>
                 <div class="form-group">
                     <label for="usr">Mật khẩu :</label>

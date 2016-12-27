@@ -23,6 +23,10 @@
                         <label for="usr">Họ và Tên : </label>
                         <input type="text" name="name" class="form-control">
                     </div>
+                <div class="form-group">
+                    <label for="usr">Username : </label>
+                    <input type="text" name="username" class="form-control">
+                </div>
                     <div class="form-group">
                         <label for="email">Email : </label>
                         <input type="text" name="email" class="form-control" >

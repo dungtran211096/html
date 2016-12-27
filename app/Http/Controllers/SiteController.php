@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
 use App\ArticleCategory;
 use App\Http\Controllers\Api\ArticlesController;
 use App\Http\Controllers\Api\SchoolsController;
@@ -11,12 +10,10 @@ use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
-use Namshi\JOSE\JWS;
-use Namshi\JOSE\JWT;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use JWTAuth;
 use Illuminate\Support\Facades\Validator;
 
@@ -49,14 +46,25 @@ class SiteController extends Controller
 
     public function postLogin(Request $request)
     {
-        $x = $request->only('name', 'password');
-        $x['active'] = true;
-        $token = JWTAuth::attempt($x);
-        if ($token) {
-            return redirect()->route('home');
-        } else {
-            return redirect()->back();
+        $credentials = $request->only('username', 'password');
+        //verify $credentials and create token for users
+        $token = JWTAuth::attempt($credentials);
+        if($token){
+            return response()->json(compact('token'));
         }
+        else{
+            return $this->WrongEmailOrPassword();
+        }
+    }
+
+    protected function WrongEmailOrPassword(){
+        return response()->json([
+            'error' => [
+                'code' => 'BAD_REQUEST',
+                'http_code' => 400,
+                'message' => 'Sai email hoac mat khau'
+                ]
+        ], 400);
     }
 
     public function register()
@@ -69,6 +77,7 @@ class SiteController extends Controller
     {
         User::create([
             'name' => $request['name'],
+            'username' => $request['username'],
             'email' => $request['email'],
             'password' => bcrypt($request['password'])
         ]);

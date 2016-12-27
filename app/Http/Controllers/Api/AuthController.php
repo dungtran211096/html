@@ -23,8 +23,6 @@ class AuthController extends Controller
 
     public function authenticate(Request $request)
     {
-
-
         $credentials = $request->only('username', 'password');
         $credentials['admin'] = true;
         $credentials['active'] = true;

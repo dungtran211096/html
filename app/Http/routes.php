@@ -19,6 +19,10 @@ Route::get('/dang-nhap',[
    'as' => 'login',
     'uses' => 'SiteController@login'
 ]);
+Route::post('/dang-nhap', [
+    'as' => 'login',
+    'uses' => 'SiteController@postLogin'
+]);
 
 Route::get('/dang-ky',[
     'as' => 'register',
