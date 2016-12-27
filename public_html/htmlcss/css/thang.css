@@ -414,6 +414,11 @@ section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them p {
   margin-top: 10px;
 }
 
+section.dang-nhap form {
+  width: 50%;
+  text-align: center;
+}
+
 .bx-wrapper .bx-viewport {
   left: 0;
   border: none;
@@ -421,9 +426,24 @@ section.trang-chu .guong-mat-tieu-bieu ul li a .thong-tin-them p {
   background-color: transparent;
 }
 
-section.dang-nhap form {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
+section.thong-tin-ca-nhan h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+section.thong-tin-ca-nhan p {
+  font-weight: bold;
+  color: #333333;
+  font-size: 17px;
+}
+
+section.thong-tin-ca-nhan .group p:before {
+  content: '\f0d7';
+  font-family: FontAwesome;
+  margin-right: 10px;
+}
+
+section.thong-tin-ca-nhan .group ul {
+  list-style-type: none;
 }

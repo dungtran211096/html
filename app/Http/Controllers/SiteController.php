@@ -46,6 +46,10 @@ class SiteController extends Controller
     {
         return view('gioithieu');
     }
+    public function info()
+    {
+        return view('thongtincanhan');
+    }
 
     public function login()
     {
