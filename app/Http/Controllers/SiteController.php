@@ -47,15 +47,16 @@ class SiteController extends Controller
         return view('include.authentication.login');
     }
 
-    public function postLogin(Request $request)
+    public function postLogin(Requests\LoginRequest $request)
     {
-
+        $a = $request->only('email', 'password');
+        $a['active'] = true;
+        dd($a);
     }
 
     public function register()
     {
-        $var = false;
-        return view('include.authentication.register',compact('var'));
+        return view('include.authentication.register');
     }
 
     public function postRegister(Requests\RegisterRequest $request)
@@ -65,7 +66,6 @@ class SiteController extends Controller
             'email' => $request['email'],
             'password' => bcrypt($request['password'])
         ]);
-        $var = true;
-        return view('include.authentication.register',compact('var'));
+        return view('include.authentication.login');
     }
 }

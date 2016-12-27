@@ -14,11 +14,6 @@
                             </ul>
                         </div>
                     @endif
-                    @if($var == true)
-                    <div class="alert alert-success">
-                        Đăng ký thành công. Vui lòng đăng nhập để sử dụng tiếp !
-                    </div>
-                        @endif
                     <div class="form-group">
                         <label for="usr">Họ và Tên : </label>
                         <input type="text" name="name" class="form-control">
