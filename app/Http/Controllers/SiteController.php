@@ -46,7 +46,7 @@ class SiteController extends Controller
 
     public function postLogin(Request $request)
     {
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('email', 'password');
         //verify $credentials and create token for users
         $token = JWTAuth::attempt($credentials);
         if($token){
