@@ -49,14 +49,7 @@ class SiteController extends Controller
 
     public function postLogin(Request $request)
     {
-        $x = $request->only('name', 'password');
-        $x['active'] = true;
-        $token = JWTAuth::attempt($x);
-        if ($token) {
-            return redirect()->route('home');
-        } else {
-            return redirect()->back();
-        }
+
     }
 
     public function register()
