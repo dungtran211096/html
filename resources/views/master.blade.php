@@ -29,7 +29,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                 <span class="sr-only">Toggle navitation</span>
             </button>
-            <a href="#" class="navbar-brand"><img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="logo"></a>
+            <a href="{{route('home')}}" class="navbar-brand"><img src="{{asset(getOption('logo'))}}" alt="logo"></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav menu">
@@ -48,16 +48,19 @@
                 <li><a href="#">Gửi hồ sơ đăng kí</a></li>
                 <li><a href="{{route('question')}}">Hướng Dẫn</a></li>
             </ul>
-            <div class="navbar-right chua-dang-nhap">
-                <button class="btn btn-success">Đăng nhập</button>
-                <button class="btn btn-danger">Đăng kí</button>
-            </div>
-            <div class="navbar-right hidden">
-                <ul class="dang-nhap">
-                    <li><a href="">Quang Thắng</a></li>
-                    <li><a href="">Đăng xuất</a></li>
-                </ul>
-            </div>
+            @if(!$user)
+                <div class="navbar-right chua-dang-nhap">
+                    <a href="{{route('login')}}" class="btn btn-success">Đăng nhập</a>
+                    <a href="{{route('register')}}" class="btn btn-danger">Đăng kí</a>
+                </div>
+            @else
+                <div class="navbar-right">
+                    <ul class="dang-nhap">
+                        <li><a href="">{{$user->name}}</a></li>
+                        <li><a href="{{route('logout')}}">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            @endif
         </div>
     </nav>
     <div class="banner">

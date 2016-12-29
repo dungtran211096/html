@@ -15,14 +15,27 @@ Route::get('/', [
     'as' => 'home',
     'uses' => 'SiteController@index'
 ]);
+
 Route::get('/dang-nhap', [
     'as' => 'login',
     'uses' => 'SiteController@login'
+]);
+Route::get('/dang-xuat', [
+    'as' => 'logout',
+    'uses' => 'SiteController@logout'
+]);
+Route::post('/dang-nhap', [
+    'as' => 'login',
+    'uses' => 'SiteController@postLogin'
 ]);
 
 Route::get('/dang-ky', [
     'as' => 'register',
     'uses' => 'SiteController@register'
+]);
+Route::post('/dang-ky', [
+    'as' => 'register',
+    'uses' => 'SiteController@postRegister'
 ]);
 Route::get('/danh-muc/{slug}', [
     'as' => 'category',
@@ -49,11 +62,7 @@ Route::get('thong-tin-ca-nhan', [
     'uses' => 'SiteController@info'
 ]);
 Route::post('api/v1/login', 'Api\AuthController@authenticate');
-Route::group([
-    'prefix' => 'api/v1',
-    'namespace' => 'Api',
-    'middleware' => ['cors', 'jwt.auth']
-], function () {
+Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'middleware' => ['cors', 'jwt.auth']], function () {
     /*
     * Options Route
     */
