@@ -44,6 +44,10 @@ Route::post('cau-hoi-thuong-gap', [
     'as' => 'question',
     'uses' => 'SiteController@postQuestion'
 ]);
+Route::get('thong-tin-ca-nhan', [
+    'as' => 'info',
+    'uses' => 'SiteController@info'
+]);
 Route::post('api/v1/login', 'Api\AuthController@authenticate');
 Route::group([
     'prefix' => 'api/v1',
