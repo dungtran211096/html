@@ -39,12 +39,12 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        @foreach($schools as $i)
+                        @foreach($categories as $i)
                             <li><a href="{{route('category', $i->slug)}}">{{$i-> name}}</a></li>
                         @endforeach
                     </ul>
                 </li>
-                <li><a href="#">Gương mặt tiêu biểu</a></li>
+                <li><a href="{{route('guongMatTieuBieu')}}">Gương mặt tiêu biểu</a></li>
                 <li><a href="#">Gửi hồ sơ đăng kí</a></li>
                 <li><a href="{{route('question')}}">Hướng Dẫn</a></li>
             </ul>

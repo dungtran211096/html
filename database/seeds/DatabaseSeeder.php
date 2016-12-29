@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         $this->call(ArticleSeeder::class);
+        $this->call(SchoolSeeder::class);
         $this->call(UserQuestionSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(QuestionSeeder::class);

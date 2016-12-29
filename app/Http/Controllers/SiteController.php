@@ -21,7 +21,7 @@ class SiteController extends Controller
     function __construct()
     {
         View::share([
-            'schools' => ArticleCategory::active()->get(),
+            'categories' => ArticleCategory::active()->get(),
             'user' => Auth::user()
         ]);
     }
@@ -87,5 +87,21 @@ class SiteController extends Controller
         $input['password'] = bcrypt($input['password']);
         Auth::login(User::create($input));
         return redirect()->route('home');
+    }
+
+    public function guongMatTieuBieu(Request $request, $slug = null)
+    {
+        if ($slug) {
+            $school = School::findBySlugOrFail($slug);
+            $users = $school->users()->toter()->active();
+        } else {
+            $users = User::toter()->active();
+        }
+        if ($name = $request->get('name')) {
+            $users->where('name', 'LIKE', "%$name%");
+        }
+        $users = $users->get();
+        $schools = School::active()->get();
+        return view('bangxephang', compact('schools', 'users'));
     }
 }

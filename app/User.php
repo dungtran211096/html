@@ -62,4 +62,19 @@ class User extends Authenticatable
         }
         $a->save();
     }
+
+    public function school()
+    {
+        return $this->belongsTo(School::class);
+    }
+
+    public function scopeToter($q)
+    {
+        return $q->where('is_5toter', 1);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
 }

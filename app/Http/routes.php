@@ -61,6 +61,10 @@ Route::get('thong-tin-ca-nhan', [
     'as' => 'info',
     'uses' => 'SiteController@info'
 ]);
+Route::get('guong-mat-tieu-bieu/{slug?}', [
+    'as' => 'guongMatTieuBieu',
+    'uses' => 'SiteController@guongMatTieuBieu'
+]);
 Route::post('api/v1/login', 'Api\AuthController@authenticate');
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'middleware' => ['cors', 'jwt.auth']], function () {
     /*
