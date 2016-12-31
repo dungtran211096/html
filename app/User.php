@@ -73,6 +73,11 @@ class User extends Authenticatable
         return $q->where('is_5toter', 1);
     }
 
+    public function scopeNotToter($q)
+    {
+        return $q->where('is_5toter', 0);
+    }
+
     public function scopeActive($query)
     {
         return $query->where('active', 1);

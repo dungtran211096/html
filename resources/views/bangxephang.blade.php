@@ -6,9 +6,9 @@
                 <div class="col-md-3 well">
                     <a class="btn btn-info">Gửi hồ sơ đăng ký</a>
                     <ul class="danh-sach-truong ">
-                        <li><a href="{{route('guongMatTieuBieu')}}">Tất Cả</a></li>
+                        <li><a href="{{route($route)}}">Tất Cả</a></li>
                         @foreach($schools as $school )
-                            <li><a href="{{route('guongMatTieuBieu',[$school->slug])}}">{{$school->name}}</a></li>
+                            <li><a href="{{route($route,[$school->slug])}}">{{$school->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>

@@ -45,6 +45,7 @@
                     </ul>
                 </li>
                 <li><a href="{{route('guongMatTieuBieu')}}">Gương mặt tiêu biểu</a></li>
+                <li><a href="{{route('bangXepHang')}}">Bảng Xếp Hạng</a></li>
                 <li><a href="#">Gửi hồ sơ đăng kí</a></li>
                 <li><a href="{{route('question')}}">Hướng Dẫn</a></li>
             </ul>
@@ -56,7 +57,7 @@
             @else
                 <div class="navbar-right">
                     <ul class="dang-nhap">
-                        <li><a href="">{{$user->name}}</a></li>
+                        <li><a href="{{route('thongTinCaNhan')}}">{{$user->name}}</a></li>
                         <li><a href="{{route('logout')}}">Đăng xuất</a></li>
                     </ul>
                 </div>
