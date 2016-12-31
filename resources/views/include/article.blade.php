@@ -1,5 +1,5 @@
 <?php
-$a = isset($is_question) ? 'question-detail' : 'article';
+$a = isset($is_question) ? 'questionDetail' : 'article';
 ?>
 <li class="bai-dang">
     <h3 class="tieu-de-bai-dang">
@@ -17,7 +17,7 @@ $a = isset($is_question) ? 'question-detail' : 'article';
     </div>
     <div class="row">
         <div class="ngay-dang">{{$i->created_at}}</div>
-        @if(isset($is_question))
+        @if(!isset($is_question))
             <ul class="tag">
                 @foreach($i->categories as $cat)
                     <li><a href="{{route('category', [$cat->slug])}}">{{$cat->name}}</a></li>

@@ -46,8 +46,9 @@ class SiteController extends Controller
 
     public function question()
     {
+        $is_question = true;
         $questions = Question::active()->paginate(getOption('max_article_1_page', 10));
-        return view('question', compact(['questions']));
+        return view('question', compact(['questions', 'is_question']));
     }
 
     public function gioiThieu()
@@ -149,6 +150,12 @@ class SiteController extends Controller
     public function article($slug)
     {
         $article = Article::findBySlugOrFail($slug);
+        return view('article', compact('article'));
+    }
+
+    public function questionDetail($slug)
+    {
+        $article = Question::findBySlugOrFail($slug);
         return view('article', compact('article'));
     }
 }

@@ -53,6 +53,10 @@ Route::get('cau-hoi-thuong-gap', [
     'as' => 'question',
     'uses' => 'SiteController@question'
 ]);
+Route::get('cau-hoi-thuong-gap/{slug}', [
+    'as' => 'questionDetail',
+    'uses' => 'SiteController@questionDetail'
+]);
 Route::post('cau-hoi-thuong-gap', [
     'as' => 'question',
     'uses' => 'SiteController@postQuestion'
@@ -69,7 +73,7 @@ Route::get('bang-xep-hang/{slug?}', [
     'as' => 'bangXepHang',
     'uses' => 'SiteController@bangXepHang'
 ]);
-Route::group(['middleware' => 'auth'],function (){
+Route::group(['middleware' => 'auth'], function () {
     Route::get('thong-tin-ca-nhan', [
         'as' => 'thongTinCaNhan',
         'uses' => 'SiteController@thongTinCaNhan'
