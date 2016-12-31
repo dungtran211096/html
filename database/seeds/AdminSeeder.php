@@ -16,7 +16,8 @@ class AdminSeeder extends Seeder
             'active' => 1,
             'username' => 'Admin',
             'password' => bcrypt('123456'),
-            'email' => 'uet.duy@gmail.com'
+            'email' => 'uet.duy@gmail.com',
+            'school_id' => 1
         ]);
     }
 }

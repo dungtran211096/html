@@ -73,6 +73,10 @@ Route::get('bang-xep-hang/{slug?}', [
     'as' => 'bangXepHang',
     'uses' => 'SiteController@bangXepHang'
 ]);
+Route::get('thanh-vien/{id}', [
+    'as' => 'userInfo',
+    'uses' => 'SiteController@userInfo'
+]);
 Route::group(['middleware' => 'auth'], function () {
     Route::get('thong-tin-ca-nhan', [
         'as' => 'thongTinCaNhan',

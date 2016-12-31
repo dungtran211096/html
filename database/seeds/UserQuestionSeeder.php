@@ -42,6 +42,7 @@ class UserQuestionSeeder extends Seeder
                 'active' => 1,
                 'is_5toter' => rand(0, 1),
                 'admin' => 0,
+                'avatar' => '/htmlcss/img/minion.jpg',
                 'school_id' => rand(1, 4),
                 'password' => bcrypt("123456"),
                 'email' => $faker->email,

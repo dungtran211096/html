@@ -21,7 +21,7 @@
                         @foreach($users as $u)
                             <li class="row">
                                 <div class="col-md-4 anh-dai-dien">
-                                    <img src="{{asset($u->avatar)}}" alt="">
+                                    <a href="{{route('userInfo',[$u->id])}}"><img src="{{asset($u->avatar)}}"></a>
                                 </div>
                                 <div class="col-md-8">
                                     <ul class="thong-tin">
@@ -39,6 +39,14 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <p>{{$u->school->name}}</p>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-md-4">
+                                                <p>Mã Sinh Viên:</p>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p>{{$u->msv}}</p>
                                             </div>
                                         </li>
                                     </ul>

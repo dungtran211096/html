@@ -158,4 +158,17 @@ class SiteController extends Controller
         $article = Question::findBySlugOrFail($slug);
         return view('article', compact('article'));
     }
+
+    public function userInfo($id)
+    {
+        $u = User::findOrFail($id);
+        $questions = [
+            'daoduc' => 'đạo đức',
+            'hoctap' => 'học tập',
+            'theluc' => 'thể lực',
+            'tinhnguyen' => 'tình nguyện',
+            'hoinhap' => 'hội nhập'
+        ];
+        return view('userInfo', compact('u', 'questions'));
+    }
 }
