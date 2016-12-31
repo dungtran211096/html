@@ -90,6 +90,7 @@ class SiteController extends Controller
     {
         $input = $request->only(['email', 'password', 'name', 'school_id']);
         $input['password'] = bcrypt($input['password']);
+        $input['active'] = 1;
         Auth::login(User::create($input));
         return redirect()->route('home');
     }
