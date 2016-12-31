@@ -88,7 +88,7 @@ class SiteController extends Controller
 
     public function postRegister(Requests\RegisterRequest $request)
     {
-        $input = $request->only(['email', 'password', 'name']);
+        $input = $request->only(['email', 'password', 'name', 'school_id']);
         $input['password'] = bcrypt($input['password']);
         Auth::login(User::create($input));
         return redirect()->route('home');

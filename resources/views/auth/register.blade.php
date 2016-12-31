@@ -40,6 +40,18 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">Trường</label>
+
+                                <div class="col-md-6">
+                                    <select name="school_id" class="form-control">
+                                        @foreach(\App\School::active()->get() as $school)
+                                            <option value="{{$school->id}}">{{$school->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label for="password" class="col-md-4 control-label">Mật Khẩu</label>
 
