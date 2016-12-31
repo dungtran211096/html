@@ -69,14 +69,17 @@ Route::get('bang-xep-hang/{slug?}', [
     'as' => 'bangXepHang',
     'uses' => 'SiteController@bangXepHang'
 ]);
-Route::get('thong-tin-ca-nhan', [
-    'as' => 'thongTinCaNhan',
-    'uses' => 'SiteController@thongTinCaNhan'
-]);
-Route::post('thong-tin-ca-nhan', [
-    'as' => 'thongTinCaNhan',
-    'uses' => 'SiteController@postThongTinCaNhan'
-]);
+Route::group(['middleware' => 'auth'],function (){
+    Route::get('thong-tin-ca-nhan', [
+        'as' => 'thongTinCaNhan',
+        'uses' => 'SiteController@thongTinCaNhan'
+    ]);
+    Route::post('thong-tin-ca-nhan', [
+        'as' => 'thongTinCaNhan',
+        'uses' => 'SiteController@postThongTinCaNhan'
+    ]);
+});
+
 Route::post('api/v1/login', 'Api\AuthController@authenticate');
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'middleware' => ['cors', 'jwt.auth']], function () {
     /*

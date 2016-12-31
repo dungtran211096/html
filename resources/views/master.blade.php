@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{asset('htmlcss/css/thang.css')}}">
     <link rel="stylesheet" href="{{asset('htmlcss/css/main.css')}}">
 
+    @section('head')@show
 </head>
 <body>
 <header>
@@ -46,7 +47,6 @@
                 </li>
                 <li><a href="{{route('guongMatTieuBieu')}}">Gương mặt tiêu biểu</a></li>
                 <li><a href="{{route('bangXepHang')}}">Bảng Xếp Hạng</a></li>
-                <li><a href="#">Gửi hồ sơ đăng kí</a></li>
                 <li><a href="{{route('question')}}">Hướng Dẫn</a></li>
             </ul>
             @if(!$user)
@@ -71,7 +71,7 @@
             @endforeach
         </ul>
         <div class="gui-ho-so">
-            <button type="button" class="btn btn-wide btn-info">Gửi hồ sơ đăng kí</button>
+            <a href="{{route('thongTinCaNhan')}}" class="btn btn-wide btn-info">Gửi hồ sơ đăng kí</a>
         </div>
     </div>
 </header>
@@ -87,7 +87,7 @@
                 <li class="col-md-3"><p>Bước 3</p> <span class="fa fa-upload"></span></li>
                 <li class="col-md-3"><p>Hoàn thành</p> <span class="fa fa-check"></span></li>
             </ul>
-            <button type="button" class="btn btn-wide btn-info">Gửi hồ sơ đăng kí</button>
+            <a href="{{route('thongTinCaNhan')}}" class="btn btn-wide btn-info right">Gửi hồ sơ đăng kí</a>
         </div>
     </div>
     <div class="cong-ty-lien-ket">
@@ -127,5 +127,6 @@
 <script src="{{asset('htmlcss/js/vendor/video.js')}}"></script>
 <script src="{{asset('htmlcss/js/flat-ui.min.js')}}"></script>
 <script src="{{asset('htmlcss/js/thang.js')}}"></script>
+@section('foot')@show
 </body>
 </html>

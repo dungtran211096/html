@@ -3,7 +3,7 @@ $a = isset($is_question) ? 'question-detail' : 'article';
 ?>
 <li class="bai-dang">
     <h3 class="tieu-de-bai-dang">
-        <a href="#">{{$i -> name}}</a>
+        <a href="{{route($a,[$i->slug])}}">{{$i -> name}}</a>
     </h3>
     <div class="row">
         <div class="col-md-4 anh-dai-dien">

@@ -145,4 +145,10 @@ class SiteController extends Controller
         }
         return back();
     }
+
+    public function article($slug)
+    {
+        $article = Article::findBySlugOrFail($slug);
+        return view('article', compact('article'));
+    }
 }
