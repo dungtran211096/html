@@ -6,6 +6,10 @@ vinasem.controller('UsersCtr', function ($scope, Api) {
         tinhnguyen: 'Tình Nguyện',
         hoinhap: 'Hội Nhập'
     };
+    $scope.statuses = {
+        toter: 'Đã Đạt Danh Hiệu',
+        notToter: 'Chưa Đạt Danh Hiệu'
+    };
     $scope.infoType = {};
     function getInfoType(type) {
         Api.get('options/' + type).then(function (rs) {

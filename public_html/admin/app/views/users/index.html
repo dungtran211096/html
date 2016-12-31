@@ -1,3 +1,8 @@
+<style>
+    #filter {
+        margin: auto 24px;
+    }
+</style>
 <div ui-view>
     <div class="section-title">
         <h3>
@@ -14,12 +19,33 @@
             </li>
         </ul>
     </div>
-
+    <div id="filter">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" class="d-input" placeholder="Tìm Kiếm" ng-model="params.search"
+                       ng-change="getRecords()">
+            </div>
+            <div class="col-md-3">
+                <select ng-model="params.status" ng-options="key as value for (key, value) in statuses" class="d-input"
+                        ng-change="getRecords()">
+                    <option value="">Tất Cả</option>
+                </select>
+            </div>
+            <!--<div class="col-md-3">-->
+                <!--<select class="d-input" id="category"-->
+                        <!--ng-change="getRecords()"-->
+                        <!--ng-options="category.id as subName(category) for category in categories"-->
+                        <!--ng-model="params.category">-->
+                    <!--<option value="">Danh Mục</option>-->
+                <!--</select>-->
+            <!--</div>-->
+        </div>
+    </div>
     <table class="list-item table-responsive table-striped table-hover">
         <tr>
             <th ng-click="checkAll()"><input type="checkbox" ng-model="isCheckAll"></th>
             <th>STT</th>
-            <th>Username</th>
+            <th>Họ Tên</th>
             <th>Email</th>
             <th>Cập Nhật</th>
             <th class="text-center" style="width: 200px;">Xử Lý</th>
@@ -27,7 +53,7 @@
         <tr ng-repeat="record in records">
             <td><input type="checkbox" ng-model="check[$index]"></td>
             <td class="text-center">{{record.id}}</td>
-            <td>{{record.username}}</td>
+            <td>{{record.name}}</td>
             <td>{{record.email}}</td>
             <td>{{record.updated_at}}</td>
             <td class="text-center">

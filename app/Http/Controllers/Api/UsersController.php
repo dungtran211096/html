@@ -11,7 +11,15 @@ class UsersController extends ApiController
     public function index(Request $request)
     {
         $perPage = $request->get('perPage');
-        $users = User::paginate($perPage);
+        $users = User::query();
+        if ($request->has('status')) {
+            $status = $request->get('status');
+            $users->$status();
+        }
+        if ($request->has('search')) {
+            $users->where('name', 'LIKE', "%{$request->get('search')}%");
+        }
+        $users = $users->paginate($perPage);
         return $this->response(new UserTransformer($users));
     }
 
