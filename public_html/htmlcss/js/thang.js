@@ -3,7 +3,12 @@
  */
 $(document).ready(function () {
     $("#slide").bxSlider({
-        auto:true,
+        auto: true,
         pager: false
+    });
+    $('nav ul li a').each(function () {
+        if ($(this).attr('href') == window.location.href) {
+            $(this).closest('li').addClass('active');
+        }
     });
 });

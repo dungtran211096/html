@@ -18,7 +18,7 @@
                                 <div class="col-md-6">Họ tên</div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input name="name" type="text" class="form-control" value="{{$user->name}}">
+                                        {{$user->name}}
                                     </div>
                                 </div>
                             </div>
@@ -28,7 +28,7 @@
                                 <div class="col-md-6">Mã sinh viên</div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input name="msv" type="text" class="form-control" value="{{$user->msv}}">
+                                        {{$user->msv}}
                                     </div>
                                 </div>
                             </div>
@@ -38,8 +38,7 @@
                                 <div class="col-md-6">Ngày sinh</div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input name="birthday" type="text" class="form-control"
-                                               value="{{$user->birthday}}">
+                                        {{$user->birthday}}
                                     </div>
                                 </div>
                             </div>
@@ -56,8 +55,7 @@
                                         <div class="col-md-6">{{$question}}</div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input name="data[{{$key}}][{{$id}}]" type="text" class="form-control"
-                                                       value="{{$user->data1[$key][$id]}}">
+                                                {{$user->data1[$key][$id]}}
                                             </div>
                                         </div>
                                     </div>
@@ -66,33 +64,6 @@
                         </ul>
                     </div>
                 @endforeach
-                <div class="group">
-                    <p>Mật Khẩu</p>
-                    <ul role="menu" class="menu">
-                        <li>
-                            <div class="row">
-                                <div class="col-md-6">Mật Khẩu Cũ</div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input name="password" type="password" class="form-control"
-                                               placeholder="Bắt buộc nhập để xác thực">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-md-6">Mật Khẩu Mới</div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input name="newPassword" type="password" class="form-control"
-                                               placeholder="Để trông nếu không đổi">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </form>
 
         </div>

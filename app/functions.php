@@ -35,3 +35,9 @@ function getDocumentId($link)
 
     return isset($a[5]) ? $a[5] : null;
 }
+
+function getYoutube($link)
+{
+    parse_str(parse_url($link, PHP_URL_QUERY), $array);
+    return isset($array['v']) ? $array['v'] : '';
+}

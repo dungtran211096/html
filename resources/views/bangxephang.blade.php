@@ -2,9 +2,8 @@
 @section('content')
     <section class="bang-xep-hang">
         <div class="container">
-            <div class="row">
+            <div class="row flex">
                 <div class="col-md-3 well">
-                    <a class="btn btn-info">Gửi hồ sơ đăng ký</a>
                     <ul class="danh-sach-truong ">
                         <li><a href="{{route($route)}}">Tất Cả</a></li>
                         @foreach($schools as $school )
@@ -58,4 +57,13 @@
             </div>
         </div>
     </section>
+@stop
+@section('foot')
+    <script>
+        $('ul.danh-sach-truong li a').each(function () {
+            if ($(this).attr('href') == window.location.href) {
+                $(this).addClass('active');
+            }
+        });
+    </script>
 @stop
