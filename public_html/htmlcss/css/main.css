@@ -88,3 +88,6 @@ section.main-bxh {
 section.bang-xep-hang {
   padding: 30px 0;
 }
+.navbar-inverse .navbar-brand {
+  padding: 0;
+}
