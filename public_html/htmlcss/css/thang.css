@@ -1,5 +1,5 @@
 header nav .navbar-header img {
-    width: 100px;
+    padding: 0 30px;
     height: 100%;
 }
 
@@ -420,6 +420,7 @@ section.thong-tin-ca-nhan p {
     font-weight: bold;
     color: #333333;
     font-size: 17px;
+    text-transform: capitalize;
 }
 
 section.thong-tin-ca-nhan .group p:before {
