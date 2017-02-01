@@ -55,7 +55,6 @@ header nav .dang-nhap li + li:before {
 
 header .banner {
     max-height: 400px;
-    margin-top: 53px;
     position: relative;
 }
 
@@ -122,8 +121,7 @@ footer .huong-dan-gui-ho-so button {
 }
 
 footer .cong-ty-lien-ket {
-    margin-top: 30px;
-    min-height: 150px;
+    padding: 30px 0;
     background-color: #f5f5f5;
     border: 1px solid #e1e1e1;
 }
@@ -131,33 +129,11 @@ footer .cong-ty-lien-ket {
 footer .cong-ty-lien-ket ul {
     list-style-type: none;
     text-align: center;
-    margin-top: 50px;
 }
 
 footer .cong-ty-lien-ket ul li {
     display: inline-block;
     margin: 10px 20px;
-}
-
-footer .lien-he {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #c9e6f1;
-}
-
-footer .lien-he .logo-truong {
-    padding-right: 30px;
-    border-right: 1px solid #d6d6d6;
-}
-
-footer .lien-he .logo-truong img {
-    width: 100%;
-}
-
-footer .lien-he .thong-tin-truong p {
-    color: #0080af;
-    font-size: 17px;
-    margin: 10px 0;
 }
 
 section.main {
@@ -528,7 +504,7 @@ section.bang-xep-hang ul.xep-hang {
 section.bang-xep-hang ul.xep-hang li {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(61, 61, 61, 0.36);
+    /*border-bottom: 1px solid rgba(61, 61, 61, 0.36);*/
 }
 
 section.bang-xep-hang ul.xep-hang li .anh-dai-dien img {
@@ -555,12 +531,6 @@ section.bang-xep-hang ul.xep-hang li ul.thong-tin li:last-child {
 
 section.bang-xep-hang ul.xep-hang li ul.thong-tin li p {
     margin: 0;
-    color: #333333;
-}
-
-section.gioi-thieu h2 {
-    text-align: center;
-    text-transform: uppercase;
     color: #333333;
 }
 

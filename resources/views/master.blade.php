@@ -9,7 +9,7 @@
     <link href="{{asset('htmlcss/css/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-{{--    <link href="{{asset('htmlcss/css/flat-ui.min.css')}}" rel="stylesheet">--}}
+    {{--    <link href="{{asset('htmlcss/css/flat-ui.min.css')}}" rel="stylesheet">--}}
 
     <link rel="shortcut icon" href="{{asset('htmlcss/img/favicon.ico')}}">
 
@@ -76,20 +76,64 @@
     </div>
 </header>
 @section('content')
+    <section class="container main-news">
+        <h2>Tin Tức</h2>
+        <?php
+        $articles = \App\Article::active()->orderDate()->paginate(5);
+        ?>
+        <div class="row">
+            @foreach($articles as $i)
+                @if($i == $articles[0])
+                    <div class="col-md-6">
+                        <article>
+                            <img src="{{url($i->image)}}">
+                            <h4>{{\Illuminate\Support\Str::words($i->name,10)}}</h4>
+                            <p>
+                                {{\Illuminate\Support\Str::words($i->excerpt, 20)}}
+                            </p>
+                        </article>
+                    </div>
+                @else
+                    <div class="col-md-3">
+                        <article>
+                            <img src="{{url($i->image)}}">
+                            <h4>{{\Illuminate\Support\Str::words($i->name,7)}}</h4>
+                        </article>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    </section>
+    <section class="main-bxh">
+        <div class="container">
+            <h2>Sinh Viên Tiêu Biểu</h2>
+            <div class="row">
+                <?php
+                $a = \App\User::active()->toter()->paginate(8);
+                ?>
+                @foreach($a as $v)
+                    <div class="col-md-3">
+                        <img src="{{url($v->avatar)}}">
+                        <h4>{{$v->name}}</h4>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 @show
 <footer>
-    <div class="container">
-        <div class="huong-dan-gui-ho-so">
-            <h3>Hướng dẫn gửi hồ sơ</h3>
-            <ul class="row cac-buoc">
-                <li class="col-md-3"><p>Bước 1</p> <span class="fa fa-edit"></span></li>
-                <li class="col-md-3"><p>Bước 2</p> <span class="fa fa-tv"></span></li>
-                <li class="col-md-3"><p>Bước 3</p> <span class="fa fa-upload"></span></li>
-                <li class="col-md-3"><p>Hoàn thành</p> <span class="fa fa-check"></span></li>
-            </ul>
-            <a href="{{route('thongTinCaNhan')}}" class="btn btn-wide btn-info right">Gửi hồ sơ đăng kí</a>
-        </div>
-    </div>
+    {{--<div class="container">--}}
+    {{--<div class="huong-dan-gui-ho-so">--}}
+    {{--<h3>Hướng dẫn gửi hồ sơ</h3>--}}
+    {{--<ul class="row cac-buoc">--}}
+    {{--<li class="col-md-3"><p>Bước 1</p> <span class="fa fa-edit"></span></li>--}}
+    {{--<li class="col-md-3"><p>Bước 2</p> <span class="fa fa-tv"></span></li>--}}
+    {{--<li class="col-md-3"><p>Bước 3</p> <span class="fa fa-upload"></span></li>--}}
+    {{--<li class="col-md-3"><p>Hoàn thành</p> <span class="fa fa-check"></span></li>--}}
+    {{--</ul>--}}
+    {{--<a href="{{route('thongTinCaNhan')}}" class="btn btn-wide btn-info right">Gửi hồ sơ đăng kí</a>--}}
+    {{--</div>--}}
+    {{--</div>--}}
     <div class="cong-ty-lien-ket">
         <div class="container">
             <ul>
@@ -101,21 +145,14 @@
     </div>
     <div class="lien-he">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo-truong">
-                        <img src="{{asset('./htmlcss/img/minion.jpg')}}" alt="logo">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="thong-tin-truong">
-                        <p>Đoàn TNCS Hà Nội - Hội sinh viên Việt Nam Trường Đại học Công Nghệ</p>
-                        <p>Địa chỉ: Nhà G3-Trường Đại học Công Nghệ 144 Xuân Thủy Cầu Giấy Hà Nội</p>
-                        <p>Điện thoại : 0989999999</p>
-                        <p>Email : uet.vnu@vnu.edu.vn</p>
-                    </div>
-                </div>
-            </div>
+            <p>Copyright © 2016, UET - All Rights Reserved</p>
+            <ul>
+                <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+            </ul>
         </div>
     </div>
 </footer>

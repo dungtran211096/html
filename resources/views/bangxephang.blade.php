@@ -3,7 +3,7 @@
     <section class="bang-xep-hang">
         <div class="container">
             <div class="row flex">
-                <div class="col-md-3 well">
+                <div class="col-md-3">
                     <ul class="danh-sach-truong ">
                         <li><a href="{{route($route)}}">Tất Cả</a></li>
                         @foreach($schools as $school )
@@ -11,7 +11,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-md-9 well">
+                <div class="col-md-9">
                     <form class="tim-kiem" method="get" action="">
                         <input type="text" name="name" placeholder="Tên Sinh Viên">
                         <button class="btn btn-info"><span class="fa fa-search"></span></button>

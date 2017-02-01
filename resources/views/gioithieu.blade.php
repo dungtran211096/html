@@ -2,7 +2,6 @@
 @section('content')
     <section class="gioi-thieu">
         <div class="container">
-            <h2>Giới thiệu</h2>
             <img src="{{asset('htmlcss/img/minion.jpg')}}"/>
             <ul class="row list">
                 <li class="col-md-4 ">
